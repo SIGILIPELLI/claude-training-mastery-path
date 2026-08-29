@@ -1,0 +1,100 @@
+site_name: Claude Training Mastery Path
+site_description: A structured, module-wise training program on using Claude AI effectively, from entry level to master level, with worked prompt examples in every module.
+site_url: https://sigilipelli.github.io/claude-training-mastery-path/
+repo_url: https://github.com/SIGILIPELLI/claude-training-mastery-path
+repo_name: claude-training-mastery-path
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Privacy Policy: privacy.md
+  - "Level 1 · Entry":
+      - Overview: level-1/index.md
+      - "01 · What Is Claude?": level-1/01-what-is-claude.md
+      - "02 · Writing Your First Effective Prompts": level-1/02-writing-effective-prompts.md
+      - "03 · Structuring a Conversation": level-1/03-structuring-a-conversation.md
+      - "04 · Using Claude for Writing Tasks": level-1/04-using-claude-for-writing-tasks.md
+      - "05 · Using Claude for Analysis & Research Tasks": level-1/05-analysis-research-tasks.md
+      - "06 · Using Claude for Code-Adjacent Tasks": level-1/06-code-adjacent-tasks.md
+      - "07 · Giving Claude Documents & Context": level-1/07-documents-and-context.md
+      - "08 · Iterating & Refining Outputs": level-1/08-iterating-and-refining-outputs.md
+      - "09 · Understanding Limitations & Verifying Outputs": level-1/09-limitations-and-verification.md
+      - "10 · Project — Build a Personal Prompt Template Library": level-1/10-project-prompt-template-library.md
+  - "Level 2 · Intermediate":
+      - Overview: level-2/index.md
+      - "01 · Advanced Prompting Techniques": level-2/01-advanced-prompting-techniques.md
+      - "02 · Chain-of-Thought & Step-by-Step Reasoning Prompts": level-2/02-chain-of-thought-prompts.md
+      - "03 · Using Claude for Long Documents & Summarization Strategies": level-2/03-long-documents-summarization.md
+      - "04 · Structuring Outputs": level-2/04-structuring-outputs.md
+      - "05 · Using Claude for Brainstorming & Ideation": level-2/05-brainstorming-ideation.md
+      - "06 · Fact-Checking & Source Verification Workflows": level-2/06-fact-checking-verification.md
+      - "07 · Using Claude Across Different Interfaces": level-2/07-across-different-interfaces.md
+      - "08 · Building Custom Instructions/Personas for Recurring Tasks": level-2/08-custom-instructions-personas.md
+      - "09 · Common Prompting Mistakes & How to Fix Them": level-2/09-common-prompting-mistakes.md
+      - "10 · Project — A Multi-Step Research Workflow Using Claude": level-2/10-project-research-workflow.md
+  - "Level 3 · Advanced":
+      - Overview: level-3/index.md
+      - "01 · Advanced Context Management for Long Projects": level-3/01-advanced-context-management.md
+      - "02 · Using AI for Complex Multi-Step Workflows": level-3/02-complex-multi-step-workflows.md
+      - "03 · Prompt Iteration & Systematic Testing of Prompts": level-3/03-prompt-iteration-testing.md
+      - "04 · Combining AI Assistance with Human Judgment": level-3/04-ai-assistance-human-judgment.md
+      - "05 · Using Claude for Learning New Skills/Subjects Effectively": level-3/05-learning-new-skills.md
+      - "06 · Team/Organizational Use of AI Assistants": level-3/06-team-organizational-use.md
+      - "07 · Privacy & Data Handling Considerations When Using AI Tools": level-3/07-privacy-data-handling.md
+      - "08 · Building Repeatable AI-Assisted Processes": level-3/08-repeatable-ai-assisted-processes.md
+      - "09 · Evaluating AI Output Quality Systematically": level-3/09-evaluating-output-quality.md
+      - "10 · Project — Design a Team AI Usage Playbook": level-3/10-project-team-ai-playbook.md
+  - "Level 4 · Master":
+      - Overview: level-4/index.md
+      - "01 · AI Literacy as an Organizational Capability": level-4/01-ai-literacy-organizational-capability.md
+      - "02 · Change Management for AI Adoption": level-4/02-change-management-ai-adoption.md
+      - "03 · Responsible AI Use & Governance Basics": level-4/03-responsible-ai-governance-basics.md
+      - "04 · Measuring the Impact of AI-Assisted Work": level-4/04-measuring-impact-ai-assisted-work.md
+      - "05 · Training Others to Use AI Assistants Effectively": level-4/05-training-others-to-use-ai.md
+      - "06 · Staying Current as AI Capabilities Evolve": level-4/06-staying-current-ai-capabilities.md
+      - "07 · Ethical Considerations in AI-Assisted Work": level-4/07-ethical-considerations.md
+      - "08 · Building an AI Usage Center of Excellence": level-4/08-ai-center-of-excellence.md
+      - "09 · Career Growth: Becoming an AI-Fluent Professional": level-4/09-career-growth-ai-fluent-professional.md
+      - "10 · Capstone — Full Organizational AI Adoption Plan": level-4/10-capstone-ai-adoption-plan.md
