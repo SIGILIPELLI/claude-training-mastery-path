@@ -1746,6 +1746,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Responsible AI Use & Governance Basics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1762,6 +1780,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-governance-is-actually-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What governance is actually for
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-minimum-viable-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The minimum viable policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accountability-without-paralysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accountability without paralysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-governance-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common governance gaps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2083,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-governance-is-actually-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What governance is actually for
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-minimum-viable-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The minimum viable policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accountability-without-paralysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accountability without paralysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-governance-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common governance gaps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2165,80 @@
 
 
 <h1 id="03-responsible-ai-use-governance-basics">03 · Responsible AI Use &amp; Governance Basics<a class="headerlink" href="#03-responsible-ai-use-governance-basics" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 4 · Master.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>Level 3 covered personal data-handling discipline. At an organizational
+scale, that discipline needs to become governance: written policy,
+assigned ownership, and a process for handling the cases individual
+judgment alone won't reliably get right. This module covers the basics
+of what that governance needs to include, without requiring you to be a
+policy specialist.</p>
+<h2 id="what-governance-is-actually-for">What governance is actually for<a class="headerlink" href="#what-governance-is-actually-for" title="Permanent link">&para;</a></h2>
+<p>Governance exists to make three things consistent across an
+organization instead of left to individual interpretation: what data
+can go into an AI tool, what output requires human review before it's
+used externally, and who is accountable when something goes wrong. None
+of these need to be complicated, but all three need to be <em>written down
+and owned</em> — an unwritten norm that "everyone knows" is not governance,
+it's a shared assumption that breaks the first time someone new joins.</p>
+<h2 id="the-minimum-viable-policy">The minimum viable policy<a class="headerlink" href="#the-minimum-viable-policy" title="Permanent link">&para;</a></h2>
+<p>A working AI-use policy, even a short one, should answer:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Example answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What data may never be entered into an AI tool?</td>
+<td>Customer PII, credentials, unreleased financials, anything under NDA</td>
+</tr>
+<tr>
+<td>Which approved tools/accounts should be used?</td>
+<td>Named tools with the org's data-handling terms, not personal accounts</td>
+</tr>
+<tr>
+<td>What output must be human-reviewed before external use?</td>
+<td>Anything sent to a customer, published, or used in a decision with real stakes</td>
+</tr>
+<tr>
+<td>Who owns this policy and updates it?</td>
+<td>A named role, not "IT" in the abstract</td>
+</tr>
+<tr>
+<td>How does someone report a concern or a near-miss?</td>
+<td>A named channel, checked regularly</td>
+</tr>
+</tbody>
+</table>
+<p>A one-page version of this, actually read and followed, beats a
+thorough policy nobody can find.</p>
+<h2 id="accountability-without-paralysis">Accountability without paralysis<a class="headerlink" href="#accountability-without-paralysis" title="Permanent link">&para;</a></h2>
+<p>Good governance assigns responsibility for <em>outcomes</em>, not for every
+individual AI-assisted action — the goal is not to require sign-off on
+every use of AI, which nobody will sustain, but to make clear that a
+human is accountable for anything that reaches a customer, a decision,
+or the public, regardless of how it was drafted. That accountability
+doesn't change because a tool helped write the first draft.</p>
+<h2 id="common-governance-gaps">Common governance gaps<a class="headerlink" href="#common-governance-gaps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>No policy on vendor/third-party AI tools</strong> embedded in other
+  software the org already uses, which often handle data without
+  anyone having reviewed the terms.</li>
+<li><strong>No incident process</strong>: when something does go wrong (a factual
+  error reaches a customer, sensitive data gets pasted somewhere it
+  shouldn't), there's no defined next step, so it either gets buried or
+  handled inconsistently.</li>
+<li><strong>Policy written once and never revisited</strong> as tools and use cases
+  change — governance needs an owner and a review cadence, not a launch
+  date.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Find your own organization's actual AI-use policy (or confirm there
+isn't one). Check it against the five questions in the table above.
+For any question it doesn't answer, write the one sentence you think
+the policy should say — and note who would need to approve that
+sentence becoming official.</p>
 
 
 

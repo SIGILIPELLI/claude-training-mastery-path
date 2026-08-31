@@ -1316,6 +1316,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Advanced Context Management for Long Projects
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1332,6 +1350,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-long-conversations-degrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why long conversations degrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintaining-a-living-context-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintaining a living context document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chunking-context-deliberately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunking context deliberately
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-context-that-spans-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling context that spans sessions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-conflicting-or-superseded-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing conflicting or superseded context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-context-audit-before-a-high-stakes-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A context audit before a high-stakes step
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2105,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-long-conversations-degrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why long conversations degrade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintaining-a-living-context-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintaining a living context document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chunking-context-deliberately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunking context deliberately
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-context-that-spans-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling context that spans sessions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-conflicting-or-superseded-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing conflicting or superseded context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-context-audit-before-a-high-stakes-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A context audit before a high-stakes step
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2209,80 @@
 
 
 <h1 id="01-advanced-context-management-for-long-projects">01 · Advanced Context Management for Long Projects<a class="headerlink" href="#01-advanced-context-management-for-long-projects" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 3 · Advanced.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>Working with Claude across a long-running project — weeks of iteration, a
+large codebase, an evolving document — requires actively managing what
+context Claude has, rather than relying on one long unstructured
+conversation. This module covers the practical techniques.</p>
+<h2 id="why-long-conversations-degrade">Why long conversations degrade<a class="headerlink" href="#why-long-conversations-degrade" title="Permanent link">&para;</a></h2>
+<p>As a conversation grows, several things happen: earlier instructions can
+get proportionally less weight relative to everything said since, the
+model has more (sometimes contradictory) material to reconcile, and it
+gets harder for <em>you</em> to remember what's already been established. A
+conversation that's drifted or is producing inconsistent answers is often
+better restarted with a tight recap than pushed further.</p>
+<h2 id="maintaining-a-living-context-document">Maintaining a living context document<a class="headerlink" href="#maintaining-a-living-context-document" title="Permanent link">&para;</a></h2>
+<p>For any project that spans multiple sessions, maintain a standalone
+context document — separate from the conversation itself — that captures
+the state Claude (and you) need going forward:</p>
+<blockquote>
+<p><strong>Project context: [name]</strong>
+- Goal: [one sentence]
+- Key decisions so far: [bullet list, dated]
+- Current constraints: [budget, deadline, technical limits]
+- Terminology/conventions specific to this project: [glossary]
+- Open questions: [what's still undecided]</p>
+</blockquote>
+<p>Paste this at the start of a new conversation instead of trying to
+re-derive context from scratch or scrolling back through old threads. In
+Claude Code, this document is exactly what a <code>CLAUDE.md</code> file is for — it's
+read automatically at the start of every session.</p>
+<h2 id="chunking-context-deliberately">Chunking context deliberately<a class="headerlink" href="#chunking-context-deliberately" title="Permanent link">&para;</a></h2>
+<p>For large source material (a full codebase, a long document set), decide
+up front what Claude actually needs for the current step rather than
+providing everything by default:</p>
+<ul>
+<li><strong>Task-scoped context</strong>: only the files/sections relevant to the current
+  sub-task, not the entire project. This keeps responses focused and
+  avoids the model reconciling irrelevant material.</li>
+<li><strong>Reference on demand</strong>: mention that other context exists and can be
+  provided if needed, rather than paginating everything in preemptively.</li>
+<li><strong>Summarized history</strong>: for context that's mostly settled (early
+  decisions that won't change), a compressed summary is more useful than
+  the original raw discussion.</li>
+</ul>
+<h2 id="handling-context-that-spans-sessions">Handling context that spans sessions<a class="headerlink" href="#handling-context-that-spans-sessions" title="Permanent link">&para;</a></h2>
+<p>When you can't carry a live conversation forward (a new session, a new
+day), a short recap message that restates only what's still relevant is
+more reliable than assuming continuity:</p>
+<blockquote>
+<p>"Continuing the [project] work. Recap: we decided on [X], the current
+constraint is [Y], and the open question is [Z]. Today's task: [...]."</p>
+</blockquote>
+<p>This is cheap and removes ambiguity about what state you're both actually
+starting from.</p>
+<h2 id="managing-conflicting-or-superseded-context">Managing conflicting or superseded context<a class="headerlink" href="#managing-conflicting-or-superseded-context" title="Permanent link">&para;</a></h2>
+<p>Long projects accumulate decisions that get revised. If you paste an old
+context document that includes a decision that's since changed, Claude
+has no way to know it's stale unless you say so:</p>
+<blockquote>
+<p>"Note: the budget mentioned in the attached doc ($10k) is outdated — the
+real number is now $15k. Use $15k for everything below."</p>
+</blockquote>
+<p>Flag superseded information explicitly rather than trusting it to be
+overridden by something said later — silent contradictions are a common
+source of subtly wrong output in long-running work.</p>
+<h2 id="a-context-audit-before-a-high-stakes-step">A context audit before a high-stakes step<a class="headerlink" href="#a-context-audit-before-a-high-stakes-step" title="Permanent link">&para;</a></h2>
+<p>Before a consequential deliverable (a client-facing document, a decision
+that's hard to reverse), do a quick audit: re-read what context Claude
+actually has versus what's in your head but never stated. It's common to
+assume Claude "knows" something because you discussed it days ago in a
+different conversation — if it's not in the current context, it isn't
+actually available.</p>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>For a real multi-session project you're working on with Claude, write a
+living context document using the template above. Use it to start your
+next session instead of re-explaining background from memory, and note
+whether it changed how much recap you needed to type.</p>
 
 
 

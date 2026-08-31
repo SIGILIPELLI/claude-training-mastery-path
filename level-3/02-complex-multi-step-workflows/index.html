@@ -1344,6 +1344,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Using AI for Complex Multi-Step Workflows
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1360,6 +1378,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-multi-step-beats-one-giant-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why multi-step beats one giant prompt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-a-workflow-stages-inputs-and-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing a workflow: stages, inputs, and gates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handing-off-between-stages-cleanly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handing off between stages cleanly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-vs-sequential-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallel vs. sequential stages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-humans-stay-in-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where humans stay in the loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovering-when-a-stage-goes-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering when a stage goes wrong
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2105,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-multi-step-beats-one-giant-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why multi-step beats one giant prompt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-a-workflow-stages-inputs-and-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing a workflow: stages, inputs, and gates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handing-off-between-stages-cleanly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handing off between stages cleanly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-vs-sequential-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallel vs. sequential stages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-humans-stay-in-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where humans stay in the loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovering-when-a-stage-goes-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering when a stage goes wrong
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2209,110 @@
 
 
 <h1 id="02-using-ai-for-complex-multi-step-workflows">02 · Using AI for Complex Multi-Step Workflows<a class="headerlink" href="#02-using-ai-for-complex-multi-step-workflows" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 3 · Advanced.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>This module covers designing workflows where Claude handles several
+distinct stages of a real process — not one prompt, but a pipeline with
+checkpoints, handoffs, and places where a human reviews before the next
+stage proceeds.</p>
+<h2 id="why-multi-step-beats-one-giant-prompt">Why multi-step beats one giant prompt<a class="headerlink" href="#why-multi-step-beats-one-giant-prompt" title="Permanent link">&para;</a></h2>
+<p>A single prompt asking for a complex end-to-end outcome ("research this
+market, write a go-to-market plan, and draft the launch emails") forces
+Claude to make dozens of implicit judgment calls with no chance for you to
+correct course. Breaking it into stages gives you a review point after
+each one, where a wrong turn costs you one stage of rework instead of the
+whole thing.</p>
+<h2 id="designing-a-workflow-stages-inputs-and-gates">Designing a workflow: stages, inputs, and gates<a class="headerlink" href="#designing-a-workflow-stages-inputs-and-gates" title="Permanent link">&para;</a></h2>
+<p>A well-designed multi-step workflow specifies, for each stage:</p>
+<ul>
+<li><strong>Input</strong>: what feeds into this stage (raw material, or the output of
+  the previous stage)</li>
+<li><strong>Task</strong>: the specific, narrow job for this stage</li>
+<li><strong>Output shape</strong>: exactly what should come out</li>
+<li><strong>Gate</strong>: what you check before letting it proceed to the next stage</li>
+</ul>
+<p><strong>Example — turning research into a client deliverable:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Input</th>
+<th>Task</th>
+<th>Gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Research</td>
+<td>Raw sources</td>
+<td>Extract findings as a table with confidence levels</td>
+<td>Are the [VERIFY]-flagged claims actually checked?</td>
+</tr>
+<tr>
+<td>2. Synthesis</td>
+<td>Verified findings</td>
+<td>Draft key takeaways, 3-5 bullets</td>
+<td>Do the takeaways follow from the findings, not from assumption?</td>
+</tr>
+<tr>
+<td>3. Draft</td>
+<td>Takeaways</td>
+<td>Full first draft of the deliverable</td>
+<td>Is the structure right before polishing prose?</td>
+</tr>
+<tr>
+<td>4. Polish</td>
+<td>Draft</td>
+<td>Tighten language, check tone/audience fit</td>
+<td>Final read before it goes out</td>
+</tr>
+</tbody>
+</table>
+<h2 id="handing-off-between-stages-cleanly">Handing off between stages cleanly<a class="headerlink" href="#handing-off-between-stages-cleanly" title="Permanent link">&para;</a></h2>
+<p>When a stage's output feeds the next stage's input, be explicit about what
+carries forward and what to ignore, so Claude doesn't re-derive or
+re-litigate an earlier stage's decisions:</p>
+<blockquote>
+<p>"Using only the verified findings table below (not any other
+assumptions), draft the takeaways. Do not revisit which claims were
+verified — treat this table as settled."</p>
+</blockquote>
+<h2 id="parallel-vs-sequential-stages">Parallel vs. sequential stages<a class="headerlink" href="#parallel-vs-sequential-stages" title="Permanent link">&para;</a></h2>
+<p>Some stages are genuinely independent and can run in parallel (e.g.
+drafting three unrelated sections of a report from the same source
+material); others are strictly sequential because each depends on the
+previous one's actual output (e.g. you can't polish a draft that doesn't
+exist yet). Design the workflow around the real dependency structure:
+running independent stages in parallel saves time; forcing a sequential
+dependency into parallel work produces stages that don't actually fit
+together.</p>
+<h2 id="where-humans-stay-in-the-loop">Where humans stay in the loop<a class="headerlink" href="#where-humans-stay-in-the-loop" title="Permanent link">&para;</a></h2>
+<p>For any workflow feeding a real decision or external deliverable, decide
+in advance which gates require actual human review (not just glancing at
+it) versus which can be trusted to proceed automatically:</p>
+<ul>
+<li><strong>Always review</strong>: anything going external, anything involving a
+  factual claim used in a decision, anything hard to undo once sent.</li>
+<li><strong>Spot-check</strong>: repetitive, low-stakes stages once you've validated the
+  pattern holds (e.g. after checking the first five outputs of a
+  templated extraction match the source correctly).</li>
+<li><strong>Full autonomy reasonable</strong>: purely mechanical reformatting of already
+  -verified content, where an error would be immediately obvious.</li>
+</ul>
+<h2 id="recovering-when-a-stage-goes-wrong">Recovering when a stage goes wrong<a class="headerlink" href="#recovering-when-a-stage-goes-wrong" title="Permanent link">&para;</a></h2>
+<p>Multi-step workflows should make failure cheap to isolate: if stage 3's
+output is wrong, go back to stage 3 with a correction, not back to stage
+1. This is the practical payoff of designing gated stages in the first
+place — you know exactly where to intervene.</p>
+<blockquote>
+<p>"Stage 3 draft assumed the wrong target audience. Redo stage 3 only,
+using the same verified findings and takeaways from stages 1-2, but
+targeting [correct audience] instead."</p>
+</blockquote>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Take a real multi-part task you currently do in one long back-and-forth
+with Claude. Redesign it as an explicit staged workflow: list each stage's
+input, task, output shape, and gate. Run it staged instead of all at once,
+and note where a gate actually caught something you'd have missed doing
+it in one pass.</p>
 
 
 

@@ -970,6 +970,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Chain-of-Thought & Step-by-Step Reasoning Prompts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -986,6 +1004,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-asking-for-steps-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why asking for steps helps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structuring-the-steps-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structuring the steps yourself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decomposition-for-multi-part-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decomposition for multi-part problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-checking-asking-claude-to-verify-its-own-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-checking: asking Claude to verify its own chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-chain-of-thought-does-not-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What chain-of-thought does not fix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2105,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-asking-for-steps-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why asking for steps helps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structuring-the-steps-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structuring the steps yourself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decomposition-for-multi-part-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decomposition for multi-part problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-checking-asking-claude-to-verify-its-own-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-checking: asking Claude to verify its own chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-chain-of-thought-does-not-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What chain-of-thought does not fix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2209,113 @@
 
 
 <h1 id="02-chain-of-thought-step-by-step-reasoning-prompts">02 · Chain-of-Thought &amp; Step-by-Step Reasoning Prompts<a class="headerlink" href="#02-chain-of-thought-step-by-step-reasoning-prompts" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 2 · Intermediate.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>Claude, like other LLMs, produces more reliable answers on multi-step
+problems when it reasons through the steps explicitly rather than jumping
+straight to a conclusion. This module covers when and how to prompt for
+that reasoning, and how to read it critically.</p>
+<h2 id="why-asking-for-steps-helps">Why asking for steps helps<a class="headerlink" href="#why-asking-for-steps-helps" title="Permanent link">&para;</a></h2>
+<p>A direct question ("Should we migrate to microservices?") invites Claude to
+pattern-match to a plausible-sounding answer. A question that asks for the
+reasoning path forces it to lay out the actual considerations in order,
+which:</p>
+<ul>
+<li>surfaces assumptions you can check or correct before accepting the answer</li>
+<li>catches arithmetic and logical errors that a jump-to-conclusion answer
+  would hide</li>
+<li>gives you a partial answer to work with if the full chain isn't quite
+  right — you can fix step 3 instead of discarding the whole response</li>
+</ul>
+<p>This matters most for math, multi-step logic, planning, and any decision
+with several interacting factors. It matters least for tasks that are
+mostly retrieval or style (e.g. "rewrite this in a friendlier tone") —
+asking those to "think step by step" just adds noise.</p>
+<h2 id="basic-pattern">Basic pattern<a class="headerlink" href="#basic-pattern" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>"A team of 6 can finish a project in 15 days. After 5 days, 2 people are
+reassigned. How many total days will the project take? Work through the
+math step by step before giving the final answer."</p>
+</blockquote>
+<p>Without the instruction, Claude may still show some work, but explicitly
+asking for it makes the steps more complete and more likely to be checked
+against each other before the final line is written.</p>
+<h2 id="structuring-the-steps-yourself">Structuring the steps yourself<a class="headerlink" href="#structuring-the-steps-yourself" title="Permanent link">&para;</a></h2>
+<p>For workflows you repeat, don't just say "think step by step" — specify
+<em>which</em> steps, so the reasoning follows a path you trust instead of
+whatever order Claude picks.</p>
+<p><strong>Generic:</strong></p>
+<blockquote>
+<p>"Should we approve this vendor? Think it through step by step."</p>
+</blockquote>
+<p><strong>Structured:</strong></p>
+<blockquote>
+<p>"Evaluate this vendor proposal in this order: (1) does it meet our
+stated technical requirements — list any gaps, (2) total cost over 3
+years including hidden fees, (3) contract risk — auto-renewal,
+termination penalties, data ownership, (4) your recommendation with the
+single biggest factor driving it. Do not skip to (4) without completing
+1-3."</p>
+</blockquote>
+<p>The structured version is more useful because a bad recommendation is easy
+to spot when you can see which of the four steps it disagrees with.</p>
+<h2 id="decomposition-for-multi-part-problems">Decomposition for multi-part problems<a class="headerlink" href="#decomposition-for-multi-part-problems" title="Permanent link">&para;</a></h2>
+<p>For problems with independent sub-parts, ask Claude to solve each part
+separately before combining them, rather than reasoning about everything
+at once.</p>
+<table>
+<thead>
+<tr>
+<th>Problem type</th>
+<th>Decomposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pricing a bundle of services</td>
+<td>Price each service standalone → identify overlap/discount logic → compute bundle price → sanity-check against a competitor price point</td>
+</tr>
+<tr>
+<td>Debugging a failing test</td>
+<td>State what the test expects → state what the code actually does → identify the exact line where they diverge → propose the fix</td>
+</tr>
+<tr>
+<td>Planning a launch</td>
+<td>List dependencies → order by dependency → assign realistic durations → flag the critical path</td>
+</tr>
+</tbody>
+</table>
+<h2 id="self-checking-asking-claude-to-verify-its-own-chain">Self-checking: asking Claude to verify its own chain<a class="headerlink" href="#self-checking-asking-claude-to-verify-its-own-chain" title="Permanent link">&para;</a></h2>
+<p>A second, cheap technique: after Claude produces a chain of reasoning, ask
+it to check its own work before you accept it.</p>
+<blockquote>
+<p>"Review the reasoning above. Is there a step where the logic doesn't
+follow, a number that doesn't add up, or an assumption that's stated but
+never justified? List any issues, then give a corrected final answer if
+needed."</p>
+</blockquote>
+<p>This isn't infallible — a model can miss its own error on a second pass —
+but it catches a meaningful share of arithmetic slips and unjustified
+leaps, and it's nearly free to ask for.</p>
+<h2 id="what-chain-of-thought-does-not-fix">What chain-of-thought does <em>not</em> fix<a class="headerlink" href="#what-chain-of-thought-does-not-fix" title="Permanent link">&para;</a></h2>
+<p>Reasoning transparency helps you catch errors, but it doesn't guarantee
+correctness. Watch for:</p>
+<ul>
+<li><strong>Confident wrong steps.</strong> A clearly-written step 3 can still be false.
+  Fluency isn't accuracy — read each step, don't just skim for structure.</li>
+<li><strong>Missing information problems.</strong> If the real answer depends on a fact
+  Claude doesn't have (your actual inventory levels, a number buried in a
+  document you didn't paste), no amount of step-by-step reasoning invents
+  that fact correctly. Give Claude the data, don't ask it to guess plausibly.</li>
+<li><strong>Padding.</strong> Sometimes "think step by step" produces steps that restate
+  the question rather than genuinely decompose it. If the steps aren't
+  adding information, tighten the prompt to name the actual sub-questions.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Take a decision you're currently weighing (a purchase, a process change, a
+technical approach) that has at least three factors feeding into it. Write
+a structured, step-ordered prompt that names each factor explicitly and
+asks for the recommendation last. Then write a one-line self-check prompt
+and run it against the output. Note whether the self-check changed the
+answer.</p>
 
 
 

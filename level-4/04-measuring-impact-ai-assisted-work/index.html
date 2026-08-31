@@ -1774,6 +1774,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Measuring the Impact of AI-Assisted Work
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1790,6 +1808,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-measurement-usually-gets-skipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why measurement usually gets skipped
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-that-actually-indicate-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics that actually indicate impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baselines-matter-more-than-the-after-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baselines matter more than the after-number
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-impact-honestly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting impact honestly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2083,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-measurement-usually-gets-skipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why measurement usually gets skipped
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-that-actually-indicate-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics that actually indicate impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baselines-matter-more-than-the-after-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baselines matter more than the after-number
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-impact-honestly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting impact honestly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2165,75 @@
 
 
 <h1 id="04-measuring-the-impact-of-ai-assisted-work">04 · Measuring the Impact of AI-Assisted Work<a class="headerlink" href="#04-measuring-the-impact-of-ai-assisted-work" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 4 · Master.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>"AI is helping" is not a measurement — it's an impression, and
+impressions are exactly what led to the "looks right" trap in Level 3,
+Module 9, applied now to the impact of a whole workflow rather than one
+piece of output. This module covers how to measure whether AI-assisted
+work is actually delivering value, not just activity.</p>
+<h2 id="why-measurement-usually-gets-skipped">Why measurement usually gets skipped<a class="headerlink" href="#why-measurement-usually-gets-skipped" title="Permanent link">&para;</a></h2>
+<p>Measuring impact is harder than measuring adoption (how many people used
+the tool, how many prompts were run), so organizations often report
+adoption numbers as if they were impact numbers. Adoption is necessary
+but says nothing about whether the work got better, faster, or worse —
+a team can run thousands of prompts a month and be net slower once
+review and correction time is counted.</p>
+<h2 id="metrics-that-actually-indicate-impact">Metrics that actually indicate impact<a class="headerlink" href="#metrics-that-actually-indicate-impact" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>What to measure</th>
+<th>Why it beats a vaguer proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td>Time from task start to accepted final output, including review/correction</td>
+<td>Captures the whole cost, not just the drafting speed</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>Error rate caught before vs. after external release</td>
+<td>Adoption doesn't matter if quality drops</td>
+</tr>
+<tr>
+<td>Rework</td>
+<td>How often AI-assisted output needs a second pass vs. non-AI output</td>
+<td>Surfaces workflows where AI is adding, not removing, work</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td>Variance in output quality across people doing the same task</td>
+<td>A shared template should shrink this; if it doesn't, the template isn't being used correctly</td>
+</tr>
+<tr>
+<td>Actual usage of what was built</td>
+<td>Whether the shared templates/processes from Module 8 (Level 3) are still used weeks later</td>
+<td>Distinguishes a real capability from a one-time training event</td>
+</tr>
+</tbody>
+</table>
+<h2 id="baselines-matter-more-than-the-after-number">Baselines matter more than the after-number<a class="headerlink" href="#baselines-matter-more-than-the-after-number" title="Permanent link">&para;</a></h2>
+<p>A time-savings claim is only meaningful against a real baseline measured
+the same way, on comparable work, before the change. "This used to take
+about half a day" from memory is not a baseline — memory of "before"
+tends to compress once the "after" feels easier. Where possible, measure
+a handful of representative tasks the old way and the new way close in
+time, before drawing a conclusion.</p>
+<h2 id="reporting-impact-honestly">Reporting impact honestly<a class="headerlink" href="#reporting-impact-honestly" title="Permanent link">&para;</a></h2>
+<p>Report the full picture, including the costs: time spent learning,
+instances where AI-assisted output needed significant correction, and
+tasks where it didn't help. A report that only lists wins will be right
+once and then lose credibility the first time someone finds a
+counterexample; a report that's honest about tradeoffs is what actually
+earns continued investment.</p>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Pick one AI-assisted task your team does regularly. Design a simple
+before/after measurement for it using two metrics from the table above —
+specify exactly what you'd measure, on how many instances, and what
+result would actually change your mind about whether the workflow is
+worth keeping.</p>
 
 
 

@@ -1138,6 +1138,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Building Custom Instructions/Personas for Recurring Tasks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1154,6 +1172,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-a-persona-is-concretely" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a persona is, concretely
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-include-in-a-durable-persona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to include in a durable persona
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-a-persona-before-relying-on-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing a persona before relying on it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-persona-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common persona failure modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-personas-live-by-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where personas live, by interface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-minimal-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A minimal template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2105,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-a-persona-is-concretely" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a persona is, concretely
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-include-in-a-durable-persona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to include in a durable persona
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-a-persona-before-relying-on-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing a persona before relying on it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-persona-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common persona failure modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-personas-live-by-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where personas live, by interface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-minimal-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A minimal template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2209,109 @@
 
 
 <h1 id="08-building-custom-instructionspersonas-for-recurring-tasks">08 · Building Custom Instructions/Personas for Recurring Tasks<a class="headerlink" href="#08-building-custom-instructionspersonas-for-recurring-tasks" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 2 · Intermediate.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>If you find yourself typing the same role, tone, and format instructions
+at the start of every prompt for a recurring task, that's a sign to build
+a reusable custom instruction (a "persona") instead of re-writing it each
+time. This module covers how to design one that actually holds up across
+many uses.</p>
+<h2 id="what-a-persona-is-concretely">What a persona is, concretely<a class="headerlink" href="#what-a-persona-is-concretely" title="Permanent link">&para;</a></h2>
+<p>A persona is a standing block of instructions — saved in a project's
+custom instructions, a system prompt, or just a text snippet you paste —
+that fixes the role, scope, tone, and output format for a recurring type
+of task, so each individual request can be short.</p>
+<p><strong>Without a persona</strong>, every request re-specifies everything:</p>
+<blockquote>
+<p>"You're a senior copy editor for a B2B SaaS blog. Tighten this for
+clarity, keep it under 800 words, use active voice, no jargon, flag
+anything that sounds like an unverified claim. Here's the draft: ..."</p>
+</blockquote>
+<p><strong>With a persona saved</strong>, the same request becomes:</p>
+<blockquote>
+<p>"Edit this draft: ..."</p>
+</blockquote>
+<p>because the role, constraints, and format are already established.</p>
+<h2 id="what-to-include-in-a-durable-persona">What to include in a durable persona<a class="headerlink" href="#what-to-include-in-a-durable-persona" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role and scope</td>
+<td>"You are a technical editor for internal engineering docs. You do not write new content, only edit for clarity and correctness."</td>
+</tr>
+<tr>
+<td>Standing constraints</td>
+<td>"Always flag unverified claims. Never remove code examples without asking."</td>
+</tr>
+<tr>
+<td>Output format</td>
+<td>"Return edits as a diff-style list: original sentence → revised sentence → one-line reason."</td>
+</tr>
+<tr>
+<td>Tone/voice</td>
+<td>"Direct, no marketing language, second person ('you') when addressing the reader."</td>
+</tr>
+<tr>
+<td>What NOT to do</td>
+<td>"Do not add new sections. Do not soften technical criticism into vague praise."</td>
+</tr>
+</tbody>
+</table>
+<p>The "what not to do" line is often the most valuable one — it's usually
+the thing that goes wrong first without an explicit persona.</p>
+<h2 id="testing-a-persona-before-relying-on-it">Testing a persona before relying on it<a class="headerlink" href="#testing-a-persona-before-relying-on-it" title="Permanent link">&para;</a></h2>
+<p>A persona is only useful if it holds up across a range of real inputs, not
+just the one example you tested it with. Before trusting it for recurring
+use:</p>
+<ol>
+<li>Run it against 3-4 genuinely different real inputs (not variations of
+   the same one) — a short one, a long one, an unusually messy one.</li>
+<li>Check specifically for drift: does it hold the format on input #4 as
+   well as input #1, or does it slip back toward default behavior on
+   harder inputs?</li>
+<li>Tighten the wording anywhere it drifted, and re-test.</li>
+</ol>
+<h2 id="common-persona-failure-modes">Common persona failure modes<a class="headerlink" href="#common-persona-failure-modes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Too vague to constrain anything.</strong> "Be helpful and professional" adds
+  no information — it's the default behavior anyway. A persona should rule
+  things <em>out</em>, not just describe a pleasant vibe.</li>
+<li><strong>Contradictory instructions.</strong> "Be extremely thorough" and "keep it
+  under 100 words" fight each other; Claude will resolve the contradiction
+  somehow, but not predictably. Resolve it yourself.</li>
+<li><strong>Missing the edge case that actually shows up.</strong> A persona written
+  against one clean example often misses how to handle an empty input, a
+  contradictory source document, or a request outside its stated scope.
+  Add an explicit instruction for the edge cases you actually hit.</li>
+</ul>
+<h2 id="where-personas-live-by-interface">Where personas live, by interface<a class="headerlink" href="#where-personas-live-by-interface" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Chat/app projects</strong>: persistent project instructions or custom
+  instructions apply to every conversation in that project.</li>
+<li><strong>Claude Code</strong>: a <code>CLAUDE.md</code> file at the project root is read at the
+  start of every session — ideal for conventions, tone, and guardrails
+  specific to that codebase.</li>
+<li><strong>API-integrated tools</strong>: a system prompt set by whoever configured the
+  integration; if you don't control it, your leverage is in how you phrase
+  each individual request instead.</li>
+</ul>
+<h2 id="a-minimal-template">A minimal template<a class="headerlink" href="#a-minimal-template" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>"Role: [who Claude is acting as and for whom]
+Scope: [what this persona does and explicitly does not do]
+Format: [exact output shape]
+Always: [standing rules that apply to every response]
+Never: [the specific failure modes to guard against]"</p>
+</blockquote>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Identify a task you ask Claude to do at least weekly with roughly the same
+role/format/tone each time. Write a persona using the template above.
+Test it against three genuinely different real inputs for that task, note
+any drift, and tighten the wording once based on what you found.</p>
 
 
 

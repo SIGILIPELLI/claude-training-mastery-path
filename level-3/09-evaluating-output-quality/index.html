@@ -1540,6 +1540,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Evaluating AI Output Quality Systematically
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1556,6 +1574,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-looks-right-isnt-a-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why "looks right" isn't a check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions-of-quality-to-check-separately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensions of quality to check separately
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-lightweight-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a lightweight rubric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spot-checking-vs-full-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spot-checking vs. full verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-outputs-across-attempts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing outputs across attempts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2094,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-looks-right-isnt-a-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why "looks right" isn't a check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions-of-quality-to-check-separately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensions of quality to check separately
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-lightweight-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a lightweight rubric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spot-checking-vs-full-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spot-checking vs. full verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-outputs-across-attempts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing outputs across attempts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2187,92 @@
 
 
 <h1 id="09-evaluating-ai-output-quality-systematically">09 · Evaluating AI Output Quality Systematically<a class="headerlink" href="#09-evaluating-ai-output-quality-systematically" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 3 · Advanced.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>"Does this look right?" is a weak evaluation method — it catches
+obviously broken output but misses plausible-sounding errors, which are
+exactly the errors AI assistants are most likely to produce. This
+module covers evaluating output more systematically, building on the
+verification habits from Level 1 and Level 2.</p>
+<h2 id="why-looks-right-isnt-a-check">Why "looks right" isn't a check<a class="headerlink" href="#why-looks-right-isnt-a-check" title="Permanent link">&para;</a></h2>
+<p>Fluent, confident, well-formatted output is not the same as correct
+output — AI-generated text is optimized to read well regardless of
+whether the underlying claims are true. A skim-level "looks right"
+check filters for surface plausibility, which is precisely the quality
+a wrong answer is most likely to have. Systematic evaluation requires
+checking against something other than your own impression of the text.</p>
+<h2 id="dimensions-of-quality-to-check-separately">Dimensions of quality to check separately<a class="headerlink" href="#dimensions-of-quality-to-check-separately" title="Permanent link">&para;</a></h2>
+<p>Bundling "is this good" into one judgment hides which dimension
+actually failed. Separate it into:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Question</th>
+<th>How to check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factual accuracy</td>
+<td>Are the specific claims true?</td>
+<td>Verify against a source, not against fluency</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Did it address everything asked?</td>
+<td>Re-read the original ask line by line against the output</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>Is everything in the output actually useful, or is some of it filler?</td>
+<td>Cut anything that doesn't serve the stated goal</td>
+</tr>
+<tr>
+<td>Internal consistency</td>
+<td>Do the parts agree with each other?</td>
+<td>Check numbers/claims that appear more than once</td>
+</tr>
+<tr>
+<td>Fit for the audience/purpose</td>
+<td>Is the tone and depth right for who'll read it?</td>
+<td>Compare against a known-good example for that audience</td>
+</tr>
+</tbody>
+</table>
+<p>A response can score well on four of these and still be unusable
+because of the fifth — a fluent, complete, internally consistent
+summary built on one fabricated statistic is still wrong.</p>
+<h2 id="building-a-lightweight-rubric">Building a lightweight rubric<a class="headerlink" href="#building-a-lightweight-rubric" title="Permanent link">&para;</a></h2>
+<p>For a task you do repeatedly, write a short rubric once rather than
+re-judging from scratch every time. Three to five criteria, each with a
+concrete pass/fail bar, is usually enough:</p>
+<ul>
+<li>Every number is traceable to a source in the input.</li>
+<li>No claim appears in the output that wasn't in the input or explicitly
+  marked as the model's inference.</li>
+<li>Action items name a specific owner.</li>
+<li>Length matches the stated constraint.</li>
+</ul>
+<p>A rubric turns evaluation from a vague impression into a checklist,
+which is both faster and more consistent across different reviewers.</p>
+<h2 id="spot-checking-vs-full-verification">Spot-checking vs. full verification<a class="headerlink" href="#spot-checking-vs-full-verification" title="Permanent link">&para;</a></h2>
+<p>Full verification of everything is often not practical at scale. A
+reasonable middle ground: fully verify anything that's a specific,
+checkable factual claim (numbers, quotes, named sources), and spot-
+check the rest — pick a few claims at random rather than always
+checking the first one, since errors aren't evenly distributed and a
+person skimming will unconsciously check the same spot every time.</p>
+<h2 id="comparing-outputs-across-attempts">Comparing outputs across attempts<a class="headerlink" href="#comparing-outputs-across-attempts" title="Permanent link">&para;</a></h2>
+<p>When iterating a prompt (Level 3, Module 3), evaluate outputs against
+each other on the same rubric rather than against a vague sense of
+improvement — this is what turns iteration into an actual comparison
+instead of a series of impressions that are hard to remember and
+compare a week later.</p>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Take a recent piece of AI-assisted output you used without a formal
+check. Apply the five-dimension breakdown to it after the fact.
+Identify which dimension, if any, you skipped at the time — and write
+one rubric line that would have caught it, for use on the next similar
+task.</p>
 
 
 

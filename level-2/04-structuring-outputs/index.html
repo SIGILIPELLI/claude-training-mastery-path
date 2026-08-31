@@ -1026,6 +1026,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Structuring Outputs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1042,6 +1060,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-structure-requests-need-to-be-explicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why structure requests need to be explicit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-and-other-machine-readable-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON and other machine-readable formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed templates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status: [date]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings-lists-and-nesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headings, lists, and nesting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-contracts-as-a-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output contracts as a checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1991,6 +2116,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-structure-requests-need-to-be-explicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why structure requests need to be explicit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-and-other-machine-readable-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON and other machine-readable formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed templates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status: [date]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings-lists-and-nesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headings, lists, and nesting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-contracts-as-a-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output contracts as a checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2010,8 +2231,106 @@
 
 
 <h1 id="04-structuring-outputs">04 · Structuring Outputs<a class="headerlink" href="#04-structuring-outputs" title="Permanent link">&para;</a></h1>
-<p>This module is part of Level 2 · Intermediate.</p>
-<p>More lessons are on the way — check back soon.</p>
+<p>Getting Claude to return output in a specific, reusable shape — a table,
+JSON, a fixed template — saves you the work of reformatting by hand and
+makes outputs easy to diff, paste into other tools, or process
+programmatically. This module covers how to specify structure reliably.</p>
+<h2 id="why-structure-requests-need-to-be-explicit">Why structure requests need to be explicit<a class="headerlink" href="#why-structure-requests-need-to-be-explicit" title="Permanent link">&para;</a></h2>
+<p>Left unconstrained, Claude will pick a reasonable format based on the
+content — which is often fine, but not reusable if you need the same shape
+every time (feeding a spreadsheet, a script, or a template). Specify the
+exact structure once and reuse the prompt.</p>
+<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h2>
+<p>State the columns, their order, and any sorting rule.</p>
+<blockquote>
+<p>"Return this as a markdown table with exactly these columns in this
+order: Task, Owner, Due Date (YYYY-MM-DD), Status (Not Started/In
+Progress/Done/Blocked). Sort by Due Date ascending. If Owner is unclear
+from the source, put 'Unassigned', don't guess a name."</p>
+</blockquote>
+<p>Naming the sort order and how to handle missing data up front avoids a
+second round-trip to fix formatting.</p>
+<h2 id="json-and-other-machine-readable-formats">JSON and other machine-readable formats<a class="headerlink" href="#json-and-other-machine-readable-formats" title="Permanent link">&para;</a></h2>
+<p>For output you'll feed into another tool, ask for the exact schema,
+including types and what to do with nulls/missing fields.</p>
+<blockquote>
+<p>"Return a JSON array. Each object: <code>{"name": string, "amount": number,
+"date": "YYYY-MM-DD", "category": string}</code>. If a receipt doesn't show a
+category, use <code>"category": null</code> rather than guessing. Return only the
+JSON array, no surrounding prose."</p>
+</blockquote>
+<p>The "return only the JSON, no surrounding prose" instruction matters —
+without it, Claude may add a friendly sentence before or after that breaks
+naive parsing. If you need to parse the result programmatically, also ask
+it to wrap the JSON in a fenced code block (or explicitly not to) depending
+on what your parser expects.</p>
+<h2 id="fixed-templates">Fixed templates<a class="headerlink" href="#fixed-templates" title="Permanent link">&para;</a></h2>
+<p>For recurring documents (status reports, meeting notes, incident
+summaries), give Claude the literal template with placeholders and ask it
+to fill it in — this is more reliable than describing the format in prose.</p>
+<blockquote>
+<p>"Fill in this template using the notes below. Keep every heading exactly
+as written, and if a section has no relevant content, write 'None this
+period' rather than omitting the heading.</p>
+<p>```</p>
+<h2 id="status-date">Status: [date]<a class="headerlink" href="#status-date" title="Permanent link">&para;</a></h2>
+<p><strong>Shipped this week:</strong>
+<strong>Blocked on:</strong>
+<strong>Next week:</strong>
+<strong>Risks:</strong>
+```"</p>
+</blockquote>
+<h2 id="headings-lists-and-nesting">Headings, lists, and nesting<a class="headerlink" href="#headings-lists-and-nesting" title="Permanent link">&para;</a></h2>
+<p>For longer structured output (a report, a plan), specify heading levels and
+nesting depth if it matters to how the result will be consumed (e.g. pasted
+into a doc with its own heading hierarchy):</p>
+<blockquote>
+<p>"Use <code>###</code> for top-level sections and <code>-</code> bullets under each — no further
+nesting. This will be pasted under an existing <code>##</code> heading in our wiki."</p>
+</blockquote>
+<h2 id="output-contracts-as-a-checklist">Output contracts as a checklist<a class="headerlink" href="#output-contracts-as-a-checklist" title="Permanent link">&para;</a></h2>
+<p>Treat every structure request as a checklist you can verify against the
+actual output:</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Right columns, right order</td>
+<td>Did it add an unrequested column?</td>
+</tr>
+<tr>
+<td>Right sort</td>
+<td>Is it actually sorted, or just grouped?</td>
+</tr>
+<tr>
+<td>Right handling of gaps</td>
+<td>Did it guess instead of flagging missing data?</td>
+</tr>
+<tr>
+<td>Nothing extra</td>
+<td>Did it add a summary paragraph you didn't ask for?</td>
+</tr>
+<tr>
+<td>Parseable</td>
+<td>If JSON, does it actually parse — no trailing commentary, no comments inside the JSON?</td>
+</tr>
+</tbody>
+</table>
+<p>Running this checklist on the first output from a new template is worth the
+minute it takes — it's much cheaper than discovering the format is subtly
+wrong after you've already fed 20 outputs into a script.</p>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Pick a task you do repeatedly where the output should always have the same
+shape (a status update, a data extraction, a comparison table). Write a
+structure prompt with an explicit schema, sort rule, and a rule for missing
+data. Run it twice on two different inputs and confirm the two outputs are
+structurally identical — same columns/keys, same formatting — even though
+the content differs.</p>
 
 
 
