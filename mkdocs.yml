@@ -1,8 +1,8 @@
 site_name: Claude Training Mastery Path
 site_description: A structured, module-wise training program on using Claude AI effectively, from entry level to master level, with worked prompt examples in every module.
-site_url: https://sigilipelli.github.io/claude-training-skillmastery/
-repo_url: https://github.com/SIGILIPELLI/claude-training-skillmastery
-repo_name: claude-training-skillmastery
+site_url: https://sigilipelli.github.io/claude-training-mastery-path/
+repo_url: https://github.com/SIGILIPELLI/claude-training-mastery-path
+repo_name: claude-training-mastery-path
 
 theme:
   name: material
