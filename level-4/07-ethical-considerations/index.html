@@ -2069,6 +2069,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2261,6 +2272,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2340,6 +2362,46 @@ comfortable if the person affected knew exactly how the output was
 produced and reviewed? If the honest answer is "I'd rather they didn't
 know," that discomfort is usually pointing at the actual ethical issue,
 even if you can't immediately name it.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>The bias risk described above isn't a bug that a "less biased" model
+release fixes outright — it's a structural consequence of how these
+systems are trained. A language model learns to continue text by finding
+statistical patterns across an enormous training corpus, and that corpus
+is a snapshot of existing human writing, with all its existing skew: who
+gets described with which adjectives, whose credentials get mentioned
+and whose don't, which names cluster with which outcomes in historical
+text. The model doesn't "believe" any of this — it has no beliefs — but
+it reproduces the correlations it was shown, and those correlations tend
+to surface most exactly where they matter most: in output that
+characterizes a person. This is why "the model didn't intend to be
+unfair" is true and irrelevant at the same time; intent isn't the
+mechanism, pattern-matching against biased training data is, and no
+amount of the model "trying harder" changes what patterns it learned.</p>
+<p>This also explains why human review is the actual mitigation rather than
+a better prompt. A biased pattern in the output is invisible from
+inside a single generation — the model can't flag its own blind spot,
+because a blind spot is precisely the thing it has no signal for. A
+prompt that says "be fair and unbiased" changes surface phrasing (softer
+words, more hedges) far more reliably than it changes the underlying
+judgment, because the instruction is itself just more text the model
+continues from, not a constraint on the statistical process underneath.
+Catching a subtly unfair characterization requires a reader who brings
+context the model doesn't have and doesn't need to have to sound
+fluent — which is exactly why fluency is the trap: confident, well-formed
+sentences read as considered judgment even when the underlying signal is
+just "this pattern was common in the training data," and the more fluent
+the output, the harder people find it to apply the same scrutiny they'd
+apply to a rougher first draft.</p>
+<p>The disclosure question has a similar structural root. Nothing in how
+these models generate text distinguishes "this is a first-draft outline
+I'll heavily rework" from "this is a finished, publishable assessment of
+a person" — the model produces both with the same fluent confidence,
+because fluency is a property of the generation process, not a signal
+about how much downstream verification the content has or needs. That
+asymmetry — output confidence is constant, but appropriate trust varies
+enormously by context — is exactly why the "would their assessment
+change" test in this module has to live outside the model, as a judgment
+call only the human in the loop can make.</p>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Think of one AI-assisted piece of work you've produced where disclosure
 was genuinely ambiguous. Apply the "would their assessment change" test

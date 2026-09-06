@@ -1564,6 +1564,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2283,6 +2294,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2412,6 +2434,41 @@ place — you know exactly where to intervene.</p>
 using the same verified findings and takeaways from stages 1-2, but
 targeting [correct audience] instead."</p>
 </blockquote>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Why does splitting a complex task into stages reliably beat one giant
+prompt, beyond "it's easier to review"? The mechanism is about how errors
+propagate through generation, and how much any single prediction has to
+get right at once.</p>
+<p><strong>A single giant prompt asks for one very-high-dimensional prediction.</strong>
+"Research this market, write a plan, and draft the emails" compresses many
+independent judgment calls into one continuous generation — market
+findings, strategic reasoning, and email tone are all being decided
+simultaneously, conditioned on each other, with no checkpoint where an
+early wrong turn (a mis-scoped market finding, say) gets corrected before
+it becomes conditioning for everything downstream. Once "the market is
+X" appears early in that single response, everything generated after
+attends to it as if it were established fact, compounding any early error.</p>
+<p><strong>Staged pipelines convert one hard prediction into several easier,
+verified ones chained together.</strong> Each stage's output, once you've
+reviewed and corrected it, becomes clean, human-checked context for the
+next stage's prompt — rather than unverified, self-generated context the
+model produced moments earlier in an uninterrupted response. This is the
+same principle as chain-of-thought (Module 2, Level 2), but with a human
+review gate inserted between steps instead of letting the model's own
+next reasoning step build on a still-unverified prior step.</p>
+<p><strong>Parallel stages work when their inputs don't depend on each other's
+output, because each one is an independent context assembly with nothing
+to inherit from a sibling stage</strong> — running them concurrently doesn't
+change the per-stage mechanism at all, it just reflects that stage B's
+prompt doesn't need anything stage A generated to be well-formed.
+Sequential stages are required precisely when a later prompt's context
+must include an earlier stage's verified output to be well-grounded.</p>
+<p><strong>Recovering from a failed stage is cheap for exactly the reason a single
+giant prompt's failure is expensive:</strong> because each stage is a bounded,
+separately-conditioned generation, a bad result is contained to what was
+built on top of <em>that stage's</em> output, not the entire chain — you re-run
+one prompt with corrected context rather than regenerating everything from
+one contaminated context.</p>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Take a real multi-part task you currently do in one long back-and-forth
 with Claude. Redesign it as an explicit staged workflow: list each stage's

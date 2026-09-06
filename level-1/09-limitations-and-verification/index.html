@@ -1008,6 +1008,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2283,6 +2294,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2482,6 +2504,42 @@ be trusted as a normal first draft.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Hallucination isn't a rare glitch layered on top of otherwise-correct
+processing — it's a predictable consequence of what the model is actually
+optimizing for, and understanding that shapes exactly what's worth
+verifying.</p>
+<p><strong>The model optimizes for plausible continuation, not for truth.</strong> At each
+generation step, Claude produces a probability distribution over next
+tokens learned from patterns in training data, then samples from it. A
+fabricated statistic and a real one can be nearly indistinguishable in
+<em>form</em> — both are fluent, specific-sounding, grammatically confident — because
+form is what the training process most directly shaped. There is no
+separate fact-checking pass that runs before an answer is shown, unless the
+product explicitly wires in a tool (like web search or a database lookup)
+that fetches real information and feeds it back into context as evidence
+the model can then quote. Without that, "confident" and "correct" are
+simply not the same axis.</p>
+<p><strong>Specific, checkable details are where the mechanism is weakest.</strong> The
+model has strong statistical pressure toward <em>plausible shapes</em> — a citation
+looks like a citation, a quote looks like a quote, a statistic looks like a
+statistic — even when the specific content is invented, because plausible
+shape is heavily reinforced by training data while any one specific fact is
+comparatively rare and easy to blend with similar-sounding alternatives.
+This is precisely why names, dates, exact numbers, and quotations deserve
+disproportionate scrutiny compared to general reasoning or structural
+advice: the failure mode concentrates exactly where the underlying
+generation mechanism has the least to constrain it.</p>
+<p><strong>Verification techniques work by injecting real information into
+context.</strong> Asking Claude to cite sources, show its reasoning, or flag
+uncertainty doesn't make the underlying generation process more truthful in
+principle — but it does make errors easier for <em>you</em> to catch, because it
+produces checkable intermediate tokens. The techniques that actually reduce
+hallucination (rather than just make it easier to catch) are the ones that
+give the model real facts to condition on — supplying the source document
+yourself, or using a tool that retrieves current information — because then
+the model is generating from genuine context instead of from training-data
+statistics alone.</p>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Take an output from any earlier exercise in this course (or generate a new
 one on a topic with a few factual claims in it — history, statistics,

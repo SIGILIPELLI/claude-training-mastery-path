@@ -2184,6 +2184,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#deliverable" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2336,6 +2347,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#deliverable" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2418,6 +2440,42 @@ re-tests assumptions as capabilities change (Module 6), and who plays
 the center-of-excellence role of collecting and spreading what works
 (Module 8) — this doesn't require new headcount, but it does require a
 named owner.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Several steps in this capstone lean on mechanisms covered earlier in the
+course, and it's worth being explicit about why they matter at the
+organizational scale rather than just the individual-task scale used in
+earlier modules. The governance questions in Step 3 (what data is
+off-limits, what requires human review) exist because of a structural
+fact about how these systems process input: anything typed into a
+prompt becomes part of the context the model conditions its response on
+for that exchange, and depending on the product and its retention
+settings, may also be stored, logged, or in some configurations used to
+improve future models — there is no universal guarantee that pasted
+text simply disappears after the response comes back. At individual
+scale, one person can reason case-by-case about what feels safe to
+paste. At organizational scale, dozens or hundreds of people making that
+call independently, without a shared boundary, turns "probably fine"
+individual judgments into a real aggregate exposure — which is exactly
+why Step 3 asks for a written data boundary rather than trusting
+distributed instinct.</p>
+<p>The measurement plan in Step 4 matters for a related structural reason:
+AI-assisted output is uniformly fluent regardless of how much genuine
+verification went into it, so "it felt faster and better" is not a
+reliable signal at either individual or organizational scale — it's
+exactly the kind of impression fluent output reliably produces whether
+or not it's accurate. A real baseline measured before rollout is the
+only way to distinguish an actual time or error improvement from the
+subjective feeling of one, which is why Step 4 insists on a measured
+baseline rather than a remembered estimate.</p>
+<p>Finally, the reason Step 7's ongoing-structure question is unavoidable
+rather than optional: model capabilities genuinely change between
+releases — new context window sizes, new tool-use behaviors, shifted
+strengths and failure modes — so a workflow tuned to one model's
+behavior can silently degrade in accuracy or drift stale as usage
+patterns evolve, without any error message announcing it. An
+organization that treats its AI adoption plan as a one-time rollout
+rather than something with a named owner to re-test is choosing, whether
+or not it says so explicitly, to let that drift go undetected.</p>
 <h2 id="deliverable">Deliverable<a class="headerlink" href="#deliverable" title="Permanent link">&para;</a></h2>
 <p>A single plan document (2-4 pages) covering: maturity assessment,
 change-management case for the pilot, minimum viable governance,

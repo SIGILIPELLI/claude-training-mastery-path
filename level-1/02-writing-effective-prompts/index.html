@@ -812,6 +812,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2283,6 +2294,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2484,6 +2506,44 @@ rewrite from scratch.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Why does adding clarity, context, and specificity actually change the
+output, rather than just making you feel better about the prompt? It comes
+down to how the model turns your prompt into a probability distribution
+over possible responses.</p>
+<p><strong>A vague prompt has a wide, flat distribution.</strong> When the model predicts
+the next token, it's conditioning on everything in context. A prompt like
+"write something about our product" is consistent with an enormous number
+of very different plausible continuations — a tagline, a technical spec, a
+tweet, a paragraph of marketing copy — so the probability mass spreads thin
+across all of them, and the token-by-token choices tend to converge on
+whatever is most generically common in training data for "product
+description"-shaped text. That's the mechanistic reason vague prompts
+produce bland, average output: the model isn't being lazy, it's correctly
+representing genuine uncertainty about what you want.</p>
+<p><strong>Specific details act as conditioning that narrows the distribution.</strong>
+Every concrete detail you add — audience, tone, length, format — becomes
+part of the context every subsequent token is generated in light of. "3
+sentences, small business owners, emphasizes ease of setup" rules out a
+huge swath of otherwise-plausible continuations, so what's left is a much
+narrower, more targeted distribution. This is also why <em>order and repetition
+within the prompt matter less than actually stating the constraint at all</em> —
+the mechanism reacts to presence of a token-level signal, not to how
+strongly you feel about it.</p>
+<p><strong>Context isn't persuasion, it's disambiguation.</strong> Words like "delay," "the
+team," or "pricing" are highly ambiguous in isolation — the token
+embeddings for common words carry many possible meanings learned from
+training data. Supplying facts ("delayed because a third-party API changed
+rate limits") gives the attention mechanism concrete, specific tokens to
+attach the rest of the response to, instead of letting it fall back on
+whatever generic scenario is statistically most common for that phrasing.</p>
+<p><strong>Format instructions work by constraining the next-token choice directly.</strong>
+Asking for a table, a numbered list, or a fixed word count changes what
+"plausible next token" means at a structural level — right after a table
+header row, a pipe character is overwhelmingly the most probable next
+token, because the model has seen that pattern countless times in training.
+You're not just requesting a preference; you're steering which tokens even
+compete for the top spot at each step.</p>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Take one of the three tasks you wrote down in Module 1's exercise. Write:</p>
 <ol>

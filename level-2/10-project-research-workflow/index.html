@@ -1434,6 +1434,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#deliverable" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2338,6 +2349,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#deliverable" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2448,6 +2470,30 @@ status), Options Considered, Recommendation, Open Risks/Unknowns. Use
 <li>Is anything stated more confidently than the underlying evidence
   justifies?</li>
 </ul>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>This project chains together seven modules' worth of techniques, and every
+one of them ultimately manipulates the same two things: what tokens sit in
+context at each step, and how tightly that context narrows the next-token
+distribution.</p>
+<p><strong>Each step in this workflow deliberately controls what's in context for
+the step after it.</strong> Scoping the question (Step 1) sets an output contract
+that shapes everything downstream; researching sub-questions with
+structured output (Step 2) produces clean, attention-friendly artifacts
+rather than loose prose; verifying flagged claims (Step 3) is the point
+where ungrounded, training-data-derived generation gets replaced with
+something checked against real sources. By the time you reach chain-of-
+thought synthesis (Step 5), the context feeding that step is no longer your
+original vague question — it's a curated, verified set of sub-answers,
+which is exactly why the final recommendation tends to be more reliable
+than asking for one directly: you've been engineering the model's
+conditioning at every step, not just its final prompt.</p>
+<p><strong>The self-review pass (Step 7) is a second, differently-framed generation
+over the same material, not an independent audit.</strong> As covered in Module 2
+of this level, "check your work" reruns the same underlying mechanism with
+different framing, which surfaces some errors by shifting the probability
+distribution toward more cautious, error-flagging language — but it's not
+a guarantee, which is why this step still benefits from your own targeted
+scrutiny (Module 6) rather than trusting the self-review verdict alone.</p>
 <h2 id="deliverable">Deliverable<a class="headerlink" href="#deliverable" title="Permanent link">&para;</a></h2>
 <p>A finished research document produced through the workflow above, plus a
 short log (a few lines is enough) of: which claims you verified and how,
