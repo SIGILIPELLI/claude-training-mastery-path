@@ -64,6 +64,43 @@ improvement — this is what turns iteration into an actual comparison
 instead of a series of impressions that are hard to remember and
 compare a week later.
 
+## How It Actually Works
+
+"Looks right" fails as a check for a specific, mechanistic reason covered
+throughout this course but worth stating precisely here: fluency and
+correctness are produced by the same process but are not the same
+property, and a skim only samples the one that's easier to fake.
+
+**Fluency is directly optimized for; factual correctness is only
+indirectly and imperfectly correlated with it.** Training rewards outputs
+that read as coherent, well-structured, and confident — those are the
+surface features a skim-level read actually evaluates. Whether a specific
+claim, number, or citation inside that fluent text is true depends on
+whether the model had (and correctly used) grounded information, which is
+an entirely separate question a skim cannot answer, because a wrong claim
+and a right one can be equally well-written.
+
+**Checking dimensions of quality separately works because different
+dimensions depend on different parts of the mechanism.** Factual accuracy
+depends on whether real, grounded information was in context (Module 6,
+Level 2); internal consistency depends on whether the generation
+maintained coherent conditioning across a long response without drifting;
+completeness depends on whether every part of your instruction actually
+got attended to and addressed, since a long, multi-part prompt can have a
+sub-request under-weighted relative to others. Splitting these into
+separate checks matters because a single "does this look good overall"
+judgment blends signals that have genuinely different failure
+mechanisms — an output can score well on one and poorly on another
+simultaneously.
+
+**Comparing outputs across multiple attempts is a direct, practical way to
+observe sampling variance.** Because generation samples from a probability
+distribution rather than computing one deterministic answer, running the
+same prompt more than once and comparing results shows you where the
+distribution is peaked and confident (attempts agree) versus wide and
+uncertain (attempts diverge) — which is a genuine, checkable signal about
+reliability that a single output can never reveal on its own.
+
 ## Exercise
 
 Take a recent piece of AI-assisted output you used without a formal

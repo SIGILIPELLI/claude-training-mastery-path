@@ -94,6 +94,53 @@ correctness. Watch for:
   the question rather than genuinely decompose it. If the steps aren't
   adding information, tighten the prompt to name the actual sub-questions.
 
+## How It Actually Works
+
+Chain-of-thought prompting is one of the clearest places where understanding
+the generation mechanism explains *why* a prompting technique works, rather
+than just that it does.
+
+**Each reasoning token becomes conditioning for the tokens after it.**
+Autoregressive generation means every new token is predicted from
+everything already generated, including the model's own prior output in
+this same response. When Claude writes out "Step 1: current team size is
+X, Step 2: their velocity is Y, therefore..." each of those intermediate
+statements becomes part of the input the *next* token is conditioned on. A
+jump-straight-to-the-answer response has none of that intermediate
+scaffolding to condition on — it has to get the right answer in one
+uninterrupted burst of plausibility, with no opportunity to "correct
+course" partway through the way explicit steps allow.
+
+**This is why decomposition helps with multi-part problems specifically.**
+A complex question compresses many sub-decisions into one generation
+target, and without explicit steps, the model has to implicitly juggle all
+of them under one probability distribution at once, which is much easier to
+get partially wrong. Breaking it into named sub-questions turns one hard,
+high-dimensional prediction into several easier, lower-dimensional ones
+chained together — each step's output becomes clean, explicit context for
+the next.
+
+**Self-checking works by making the model generate a *second*, differently-
+framed pass over the same material, which surfaces a different set of
+plausible continuations.** Asking "check your work" doesn't grant access to
+some hidden verification module — it simply runs the same
+next-token-prediction machinery again, now conditioned on the original
+answer plus an instruction to scrutinize it, which the training data
+associates with more cautious, error-catching language. It catches some
+mistakes because that reframing shifts the distribution, not because
+there's now a guaranteed-independent check.
+
+**What it doesn't fix, and why:** chain-of-thought cannot compensate for
+missing facts, because generated reasoning tokens are still produced from
+the same training-data patterns and whatever's in context — if the true
+answer depends on information the model was never given, no amount of
+step-by-step scaffolding manufactures that information. It also doesn't
+guarantee the *displayed* reasoning caused the *displayed* answer in a
+strictly causal sense — a fluent-looking derivation can still be
+post-hoc-plausible rather than the actual determining factor, which is
+exactly why verification (Module 9, Level 1) still matters even when
+Claude "shows its work."
+
 ## Exercise
 
 Take a decision you're currently weighing (a purchase, a process change, a

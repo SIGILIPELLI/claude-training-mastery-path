@@ -82,6 +82,47 @@ natural place to redirect after each step if the direction isn't right.
   well-articulated says nothing about whether it will actually work; use
   brainstorming to widen options, not to substitute for testing them.
 
+## How It Actually Works
+
+Why does "give me 20 ideas" tend to collapse into near-duplicates, while
+"cover 4 different angles" doesn't? It comes down to sampling and how the
+model avoids (or fails to avoid) repeating itself.
+
+**Generation is sampled from a probability distribution, and the most
+likely tokens dominate unless something pushes generation elsewhere.** At
+each step, the model has a ranked distribution over next tokens; left
+alone, a long list-generation task naturally gravitates toward the highest-
+probability continuation pattern repeatedly, which tends to be a set of
+closely related variations on whatever idea got the most reinforcement
+first — because the earlier ideas in the list are now in context too,
+biasing later ones toward similarity via attention.
+
+**Explicit categories function as forced conditioning changes mid-
+generation.** When you ask for ideas "across 4 different angles," you're
+requiring the model to change what it's conditioning on for each block —
+angle 1's ideas are generated with "angle 1" framing in context, angle 2's
+with different framing — which pushes the distribution to genuinely
+different regions of it rather than resampling near the same peak
+repeatedly. This is a direct, mechanistic reason categorized brainstorm
+prompts produce more genuine variety than a flat quantity request.
+
+**Constraints work the same way pruning works in search: they eliminate
+the most statistically common (and therefore least surprising) answers.**
+A constraint like "under $500" or "no plugins" removes the highest-
+probability generic ideas from being valid continuations, forcing the
+model into less-traveled, lower-probability — and often more interesting —
+regions of its learned distribution. This is the actual mechanism behind
+"constraints breed creativity" here, not a motivational platitude.
+
+**What brainstorming can't give you: genuinely novel-to-the-world ideas
+outside its training distribution.** Every idea, however creatively
+recombined, is still built from patterns present somewhere in training
+data — the model doesn't have lived experience of your specific market or
+users to draw an idea from that didn't already exist in some form in what
+it learned from. That's the mechanistic reason validation and real-world
+testing (not more brainstorming) is what actually separates a good idea
+from a merely plausible-sounding one.
+
 ## Exercise
 
 Pick a real problem you're brainstorming for (a name, a campaign, a

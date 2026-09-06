@@ -114,6 +114,51 @@ Before sending a non-trivial prompt, a quick self-check:
 - Is pasted content clearly marked as data, not instruction?
 - Am I asking for one coherent job, or secretly four?
 
+## How It Actually Works
+
+Each mistake above has the same mechanistic root: it under-specifies or
+mis-positions the tokens the model conditions on. Seeing that pattern makes
+new, unlisted mistakes easier to diagnose on your own.
+
+**Mistakes 1, 3, and 4 are all forms of leaving the target distribution too
+wide.** Vague success criteria, an unstated example format, and cramming
+several unrelated asks into one instruction all leave the model with a wide
+range of plausible, "reasonable-looking" continuations to choose among —
+and it will pick one, but not necessarily yours, because nothing in context
+narrowed the distribution toward your specific bar.
+
+**Mistake 2 is about attention, not intent.** Burying the actual
+instruction in the middle of a lot of context doesn't mean Claude "misses"
+it in a human sense — the instruction tokens are still there and still
+attended to — but they compete for weight against everything surrounding
+them, so a critical instruction stated once, quietly, mid-paragraph, has
+measurably less influence on the final tokens than the same instruction
+stated clearly and positioned prominently (often near the start or the very
+end of the prompt, which tends to get disproportionate weight).
+
+**Mistake 5 misunderstands what a single response actually is: one sample
+from a distribution, not a deterministic verdict.** Since generation
+involves sampling from a probability distribution at each step, the same
+prompt run twice can legitimately produce different results — treating one
+draw as final skips the cheap, high-value step of asking for a second pass
+or a revision (Module 8, Level 1).
+
+**Mistake 6 is the data/instruction confusion from Module 1 of this level**
+— without a clear boundary, tokens from pasted content can be attended to
+as if they were part of the instruction, especially if the pasted content
+itself contains imperative-sounding language.
+
+**Mistake 7 is the hallucination mechanism from Module 9 (Level 1)** in
+practice: fluency and correctness are optimized together but are not the
+same thing, so a wrong answer can be exactly as confident-sounding as a
+right one.
+
+**Mistake 8 wastes context-window budget re-stating what's already sitting
+in the transcript** (Module 3, Level 1) — the model already has access to
+everything said earlier in the same conversation, so re-explaining it
+doesn't add new conditioning, it just uses up window space that could
+otherwise hold new, useful information.
+
 ## Exercise
 
 Find a prompt of yours (or a colleague's) that produced a disappointing

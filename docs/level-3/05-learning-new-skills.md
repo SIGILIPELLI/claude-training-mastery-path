@@ -88,6 +88,47 @@ session, spaced out over days:
   when you're learning the subject specifically *because* you can't yet
   independently judge correctness.
 
+## How It Actually Works
+
+Why is being quizzed more effective than reading an explanation, mechanistically
+speaking — for you, the learner, and also in terms of what's actually happening
+when Claude generates a quiz question versus an explanation?
+
+**Reading a fluent explanation only exercises recognition, and recognition
+is a low bar.** A well-written explanation is optimized (by the same
+plausibility-driven generation process covered throughout this course) to
+be maximally coherent and easy to follow — which means it's specifically
+easy to nod along with without your own understanding being tested at all.
+Nothing about the generation process requires the reader to reconstruct the
+idea; it only requires the model to produce fluent text, which is exactly
+why passive reading feels like understanding without necessarily producing
+recall.
+
+**Being quizzed forces you to be the one generating from your own context
+(your memory) instead of Claude generating from its training data.** When
+Claude asks you a question and you have to answer before seeing the
+explanation, you're doing the equivalent of an unaided next-token
+prediction from your own knowledge — a much stronger signal of what you
+actually know than recognizing a correct-sounding statement someone else
+wrote.
+
+**The Feynman technique works here because Claude, as a reader of your
+explanation, can only respond to what's actually in your text — it has no
+way to fill in gaps in your reasoning charitably the way a sympathetic
+human listener might.** When you explain a concept back and Claude's
+follow-up questions probe a specific weak point, that's the attention
+mechanism genuinely locating the place where your explanation's tokens
+were vague, contradictory, or missing a step — a direct, checkable signal
+about where your own understanding is incomplete.
+
+**What Claude can't replace: skills that require your own repeated,
+embodied practice to build (typing speed, a physical technique, real-time
+decision-making under pressure) depend on feedback loops that live in your
+own nervous system or environment, not in a text-generation exchange** —
+no amount of well-structured dialogue substitutes for the practice loop
+itself, only for the explanation, feedback, and error-analysis wrapped
+around it.
+
 ## Exercise
 
 Pick a topic you're currently trying to learn. Use the Feynman-technique

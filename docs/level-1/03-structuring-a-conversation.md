@@ -101,6 +101,40 @@ Not everything belongs in one long thread. Consider starting fresh when:
 | Need an independent take | Start a new conversation, not a follow-up in the same one |
 | Switching topics entirely | Start a new conversation |
 
+## How It Actually Works
+
+"Multi-turn context" isn't a special memory feature — it's the same
+mechanism from Module 1 (predicting the next token from everything visible)
+applied to a longer transcript.
+
+**Every turn re-sends the whole conversation.** There is no live, persistent
+conversation object sitting on a server that Claude "remembers." Each time
+you send a message, the product assembles the full transcript so far — your
+messages, Claude's replies, any system instructions — into one sequence of
+tokens, and that entire sequence is fed through the model again from
+scratch to generate the next reply. What feels like continuity is really:
+same input each time, just longer, plus the newest message appended.
+
+**This is why follow-ups work and why corrections apply going forward.**
+"The second option you gave me" resolves correctly because that earlier
+reply is literally still sitting in the token sequence the model is
+conditioning on — attention can look back at it directly. And "actually,
+make it shorter" changes future output because it becomes new context that
+every subsequent generation attends to; it doesn't edit anything retroactively,
+it just adds a new, more recent instruction that tends to dominate because
+recent context is usually most relevant to what's being asked right now.
+
+**This is also why context windows have a limit, and why long conversations
+degrade.** The transcript can only grow so large before it hits the model's
+context window ceiling (measured in tokens, not messages). Well before that
+hard limit, two effects show up: attention has to spread across more
+material, which can dilute how strongly any one instruction "sticks," and
+if the transcript is ever truncated to fit (older messages dropped), Claude
+literally loses access to that material — it isn't choosing to forget it,
+it's no longer in the input at all. That's the real reason very long,
+sprawling sessions benefit from a fresh conversation with a tight summary
+of what matters, rather than scrolling further and further back.
+
 ## Exercise
 
 Pick a task that has at least two rounds of revision in it (e.g., drafting

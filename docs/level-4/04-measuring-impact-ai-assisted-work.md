@@ -43,6 +43,31 @@ once and then lose credibility the first time someone finds a
 counterexample; a report that's honest about tradeoffs is what actually
 earns continued investment.
 
+## How It Actually Works
+
+Measuring impact honestly requires the same discipline as evaluating a
+single output (Module 9, Level 3), scaled up — and for the same
+mechanistic reason: fluent, confident-feeling AI-assisted work is not
+automatically better work.
+
+**Activity metrics measure exposure to the mechanism, not its effect.**
+Counting prompts run or people using the tool tells you how much
+generation is happening, but generation's defining property — plausible
+output that reads well regardless of whether it's actually better than the
+alternative — means volume of use has no necessary relationship to
+quality of outcome. This is the direct, mechanistic reason "adoption" and
+"impact" are different measurements that can diverge sharply: heavy use of
+a tool whose output isn't being verified can produce a lot of fluent,
+unreliable work faster.
+
+**Baselines matter because sampling variance and selection bias both
+distort a single after-number.** An impressive AI-assisted result reported
+without a baseline is one sample of a generation process that inherently
+varies (Module 9, Level 3) — without knowing what the same task would have
+produced without AI assistance, or across several attempts, an isolated
+"after" number can't distinguish real, repeatable improvement from a
+favorable draw or from measuring the easiest cases first.
+
 ## Exercise
 
 Pick one AI-assisted task your team does regularly. Design a simple

@@ -79,6 +79,47 @@ place — you know exactly where to intervene.
 > using the same verified findings and takeaways from stages 1-2, but
 > targeting [correct audience] instead."
 
+## How It Actually Works
+
+Why does splitting a complex task into stages reliably beat one giant
+prompt, beyond "it's easier to review"? The mechanism is about how errors
+propagate through generation, and how much any single prediction has to
+get right at once.
+
+**A single giant prompt asks for one very-high-dimensional prediction.**
+"Research this market, write a plan, and draft the emails" compresses many
+independent judgment calls into one continuous generation — market
+findings, strategic reasoning, and email tone are all being decided
+simultaneously, conditioned on each other, with no checkpoint where an
+early wrong turn (a mis-scoped market finding, say) gets corrected before
+it becomes conditioning for everything downstream. Once "the market is
+X" appears early in that single response, everything generated after
+attends to it as if it were established fact, compounding any early error.
+
+**Staged pipelines convert one hard prediction into several easier,
+verified ones chained together.** Each stage's output, once you've
+reviewed and corrected it, becomes clean, human-checked context for the
+next stage's prompt — rather than unverified, self-generated context the
+model produced moments earlier in an uninterrupted response. This is the
+same principle as chain-of-thought (Module 2, Level 2), but with a human
+review gate inserted between steps instead of letting the model's own
+next reasoning step build on a still-unverified prior step.
+
+**Parallel stages work when their inputs don't depend on each other's
+output, because each one is an independent context assembly with nothing
+to inherit from a sibling stage** — running them concurrently doesn't
+change the per-stage mechanism at all, it just reflects that stage B's
+prompt doesn't need anything stage A generated to be well-formed.
+Sequential stages are required precisely when a later prompt's context
+must include an earlier stage's verified output to be well-grounded.
+
+**Recovering from a failed stage is cheap for exactly the reason a single
+giant prompt's failure is expensive:** because each stage is a bounded,
+separately-conditioned generation, a bad result is contained to what was
+built on top of *that stage's* output, not the entire chain — you re-run
+one prompt with corrected context rather than regenerating everything from
+one contaminated context.
+
 ## Exercise
 
 Take a real multi-part task you currently do in one long back-and-forth

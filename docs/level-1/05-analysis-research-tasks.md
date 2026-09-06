@@ -78,6 +78,45 @@ well-organized as a right one.
 | Analyze real data | Paste or attach the actual data — don't let it guess at numbers you have |
 | High-stakes decision | Use Claude to structure the tradeoffs; make the final call yourself, verifying key facts independently |
 
+## How It Actually Works
+
+Asking Claude to "show its reasoning" isn't asking it to reveal a hidden
+internal computation — it's changing what gets generated, which in turn
+changes what the *final answer* ends up being. That distinction matters a
+lot for how much to trust structured analysis.
+
+**Generated reasoning becomes part of the model's own context.** When you
+ask for step-by-step reasoning before a conclusion, each reasoning token
+the model writes gets appended to the sequence and is then attended to when
+generating the *next* token — including, eventually, the conclusion. In
+effect, the model's own visible reasoning becomes additional conditioning
+for its answer, in the same way a fact you supply does. This is the real
+mechanism behind why asking for structured comparisons and worked reasoning
+tends to produce better, more consistent conclusions than asking for a
+verdict directly: laying out criteria first genuinely constrains what
+conclusion is statistically coherent to generate next, rather than jumping
+straight to a plausible-sounding answer with nothing forcing it to be
+consistent with anything.
+
+**But visible reasoning is not a window into a separate "thinking" process
+that already happened.** There is no hidden calculation that the displayed
+reasoning merely reports on — the displayed reasoning *is* the computation,
+in the sense that the tokens Claude writes as "reasoning" are generated the
+same way as any other output, and can themselves be wrong, incomplete, or
+disconnected from a genuinely correct process while still reading as
+fluent and logical. A confident-sounding chain of reasoning is still a
+plausibility-optimized generation, not a proof.
+
+**This is why the "flag anything that fails a test" pattern works better
+than "what do you think."** Naming explicit pass/fail criteria forces
+specific, checkable tokens (which option satisfies criterion X, does it or
+doesn't it) into the generation, which you can then independently verify
+against the source material — rather than accepting a fluent-sounding
+overall judgment that's harder to audit token by token. Structuring the
+ask doesn't make Claude more likely to be right in some deep sense; it
+makes the *reasoning legible enough for you to check it yourself*, which is
+where the real reliability gain comes from.
+
 ## Exercise
 
 Pick a real decision you're weighing (work or personal — which tool to

@@ -79,6 +79,36 @@ shared library exists but nobody uses it (usually a sign it's not
 actually easier than writing from scratch), or verification is happening
 inconsistently depending on who's under deadline pressure that week.
 
+## How It Actually Works
+
+Shared prompt libraries and standards aren't just organizational hygiene —
+they compensate for a real property of the underlying mechanism: prompts
+are not portable "settings," they're the literal content the model
+conditions on, so every rewrite is a fresh roll of the dice.
+
+**Two people describing "the same task" produce meaningfully different
+context, and therefore meaningfully different output distributions.**
+Because output quality is driven by exactly what tokens are present —
+clarity, context, specificity (Module 2, Level 1) — one teammate's careful,
+specific phrasing and another's rushed, vague version of "the same"
+request are, mechanistically, different conditioning inputs, and there's
+no reason to expect the same quality of output from them. This is the
+literal cause of "inconsistent quality" across a team: it's not that some
+people are better at getting Claude to cooperate, it's that they're
+supplying it different information to condition on.
+
+**A shared library works the same way a personal template does (Module 10,
+Level 1), scaled up** — it fixes the highest-leverage tokens (role, format,
+constraints, data-handling boundaries) once, centrally, so that variation
+across team members' usage collapses to just the task-specific inputs
+they drop in, rather than variation in the entire prompt.
+
+**A data-handling baseline matters because context, once sent, is context
+the model has processed** — there's no mechanism for retroactively
+un-conditioning a response on information already included in a request.
+This is exactly why the practical rule is about what goes into the prompt
+in the first place, not about anything that could be done afterward.
+
 ## Exercise
 
 For your own team (or a hypothetical one doing similar work), draft: one

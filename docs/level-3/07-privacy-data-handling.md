@@ -74,6 +74,49 @@ not just what's in the current message. Before granting broad access,
 scope it to what the task actually needs, and review what's connected
 periodically rather than granting once and forgetting.
 
+## How It Actually Works
+
+Understanding what actually happens to a prompt end-to-end clarifies why
+"just be careful what you paste" is the right rule rather than something
+you can work around cleverly.
+
+**At inference time, your input becomes tokens processed by running the
+model — a real computation on real infrastructure, not something that
+vanishes when the response finishes.** The text you send is converted to
+tokens, passed through the model's layers to generate a response, and
+depending on the provider's retention policy and your account settings,
+the raw input and output may also be logged or stored for abuse
+monitoring, product improvement, or (on some plans) potential use in
+future training — the specifics vary by provider and plan and change over
+time, which is exactly why this module points you to current policy rather
+than asserting fixed numbers here.
+
+**Training, if it happens on a given account tier, works by incorporating
+patterns from stored conversations into a future model's learned
+weights** — a fundamentally different (and much less reversible) fate than
+being merely stored: once information has influenced trained weights, it
+can't be "deleted" the way a stored file can, because it no longer exists
+as a discrete, extractable record — it's diffused into statistical
+parameters shared across all future outputs of that model. This is the
+mechanistic reason retention settings and training opt-outs are two
+genuinely different levers, not one.
+
+**Anonymizing before pasting works because the model can only condition on
+the tokens it actually receives.** Replacing a real name or account number
+with a placeholder before sending removes that specific information from
+what's processed and potentially retained, while still letting the
+model's generation be conditioned on everything else that's actually
+relevant to the task — you're deliberately shaping context to include what
+you need and exclude what you don't, the same context-management principle
+from Module 1, applied to sensitivity rather than relevance.
+
+**Connector and file access extends what's "sent" beyond what you typed.**
+When a tool can read a connected drive or inbox, whatever it retrieves
+becomes context the same way pasted text does — it's processed and
+potentially logged the same way, which is why the sensitivity checklist
+needs to apply to what a connected tool *can* access, not only to what you
+manually paste.
+
 ## Exercise
 
 Take a real task you'd like AI help with that involves data you were

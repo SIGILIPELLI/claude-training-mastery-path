@@ -81,6 +81,44 @@ use:
 > Always: [standing rules that apply to every response]
 > Never: [the specific failure modes to guard against]"
 
+## How It Actually Works
+
+A persona is often described as Claude "adopting a role," but mechanistically
+it's simpler and more literal than that — and knowing exactly what it is
+explains both why personas work well and why they sometimes fail in
+specific, predictable ways.
+
+**A standing instruction is just context that's present on every single
+turn, positioned early.** Whether it's called a system prompt, custom
+instructions, or a saved persona, it works by being included in the token
+sequence for every generation in that context — the model doesn't "load" a
+persistent identity into some separate module; it re-reads the persona text
+fresh, alongside everything else, every time. This is why a persona that's
+vague or self-contradictory produces inconsistent behavior across
+sessions: there's no memory of "how it interpreted this last time" to fall
+back on, so each session's interpretation is freshly derived from the same
+(possibly ambiguous) text.
+
+**Persona instructions compete with user turns for attention, and recency
+matters.** Because attention weighs all context but real-world behavior
+shows a bias toward more recent tokens carrying more influence on the very
+next prediction, a persona's standing rules can get outweighed later in a
+long session by an explicit, specific user request that contradicts it —
+this is exactly why "common persona failure modes" include personas that
+get overridden or "drift" over a long conversation, and it's also why
+positioning matters: a system-level instruction slot (kept structurally
+separate and re-supplied each turn by the product) resists this drift much
+better than a persona buried once at the top of a single long chat.
+
+**Testing a persona before relying on it works because it surfaces
+edge-of-distribution behavior early.** A persona description is itself just
+a prompt, subject to the same specificity principle as any other (Module 2,
+Level 1) — an instruction like "be helpful and professional" is vague
+enough that its actual effect on generation is hard to predict without
+testing across several realistic inputs, because "professional" pulls
+toward different plausible continuations depending on what surrounding
+task-specific tokens happen to be in context at the time.
+
 ## Exercise
 
 Identify a task you ask Claude to do at least weekly with roughly the same

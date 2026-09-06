@@ -54,6 +54,32 @@ doesn't change because a tool helped write the first draft.
   change — governance needs an owner and a review cadence, not a launch
   date.
 
+## How It Actually Works
+
+Good governance policy is written around two hard mechanistic facts about
+how these systems actually behave — worth stating explicitly so policy
+doesn't drift into rules that don't match reality.
+
+**Inputs are processed and potentially retained the moment they're sent —
+there's no "undo" once a prompt is submitted.** As covered in Module 7
+(Level 3), the tokens in a request are computed over immediately and may
+be logged or retained per the provider's policy; a governance policy that
+tries to control data handling *after the fact* is solving the wrong
+problem — the only point of control that actually exists is what's allowed
+into the prompt (or a connected tool's reach) in the first place, which is
+why minimum viable policy centers on pre-submission rules, not
+post-submission remediation.
+
+**Output correctness is not guaranteed by the mechanism, so accountability
+for a wrong output has to sit with a person, not the tool.** Because
+generation optimizes for plausibility rather than verified truth (Module 9,
+Level 1), there is no meaningful sense in which "the AI" can be
+accountable for a bad decision made using its output — accountability
+requires a state of knowing and choosing that only a person using the tool
+has. This is the actual justification for assigning a human owner to every
+AI-assisted decision with real stakes, rather than a compliance formality:
+it reflects where responsibility can mechanistically even live.
+
 ## Exercise
 
 Find your own organization's actual AI-use policy (or confirm there

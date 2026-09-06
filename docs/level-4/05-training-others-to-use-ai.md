@@ -56,6 +56,33 @@ the same script.
 - No follow-up, so early bad habits (skipping verification, copy-pasting
   output unreviewed) go uncorrected until they cause a real problem.
 
+## How It Actually Works
+
+Training on judgment, not interface, is the right focus specifically
+because of where the underlying mechanism actually varies output quality —
+and understanding that tells you exactly what to spend training time on.
+
+**The interface has almost no effect on output quality; what's in the
+prompt has almost all of it.** Clicking the right buttons doesn't change
+what the model conditions on — a well-specified prompt typed into a
+minimal chat box outperforms a vague one typed into the most polished
+interface, because quality is entirely a function of clarity, context, and
+specificity (Module 2, Level 1), none of which the interface supplies for
+you. This is the direct, mechanistic reason demoing the tool (which
+mostly showcases the interface and a couple of cherry-picked prompts)
+teaches almost nothing transferable: it doesn't show the learner *why*
+those particular prompts worked, which is the only part that generalizes.
+
+**Judgment training works because it targets the two places where the
+mechanism is genuinely unreliable and needs a human check: confident
+plausibility standing in for correctness (Module 9, Level 1), and
+generation standing in for judgment it can't supply (Module 4, Level 3).**
+Effective training builds pattern-recognition for exactly those two
+failure modes — teaching someone to notice when an answer is suspiciously
+fluent about something they should verify, and when a task actually needed
+their own accountable decision rather than a draft — which is a
+transferable skill in a way that "here are the buttons" never is.
+
 ## Exercise
 
 Plan a 30-minute training session for one real colleague on one real

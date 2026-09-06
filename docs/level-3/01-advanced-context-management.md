@@ -81,6 +81,49 @@ assume Claude "knows" something because you discussed it days ago in a
 different conversation — if it's not in the current context, it isn't
 actually available.
 
+## How It Actually Works
+
+"Conversation degrades" is a real, mechanistic effect, not a vague
+impression — and knowing its cause is what tells you exactly when a living
+context document or a fresh session actually helps versus when it doesn't.
+
+**Every reply is generated from the entire visible transcript, so more
+transcript means more for attention to spread across.** As covered in
+Module 3 (Level 1), there's no persistent memory object — each turn
+reprocesses everything from scratch. As the transcript grows, three
+distinct things happen mechanistically: the token budget gets consumed by
+material of decreasing marginal relevance, attention has more candidate
+tokens to weigh (which doesn't make early instructions vanish, but does
+mean they compete against a larger pool), and if the transcript ever
+exceeds the context window, the oldest material is dropped from what the
+model can see at all — a hard loss, not a fuzzy one.
+
+**A living context document works by re-injecting the highest-value facts
+close to the point of generation, rather than relying on their original
+(now distant) mention.** Restating current state, decisions, and open
+questions in a compact block near the top of your next message means those
+facts are recent, prominent tokens again — full-strength conditioning —
+instead of buried far back in a sprawling history competing with
+everything said since.
+
+**Deliberate chunking exists because attention cost and dilution both
+scale with what's in context, not because of an arbitrary rule.**
+Splitting a large task into chunks that each fit comfortably in a fresh,
+focused context window keeps every part of that chunk getting strong
+attention, at the cost of losing automatic cross-chunk awareness — which is
+exactly why explicit handoff summaries between chunks matter (Module 2
+picks this up for multi-step workflows specifically).
+
+**Superseded context is a genuine hazard because nothing automatically
+marks old information as stale.** If you said "we're targeting Q3" early
+on and later said "actually, Q4," both statements remain in the transcript
+— the model has to infer from recency and phrasing which one governs, and
+with enough conversation between them, that inference can go either way.
+Explicitly retracting or overwriting outdated context ("ignore the earlier
+Q3 target, we're now targeting Q4") gives an unambiguous, recent signal
+rather than leaving two contradictory facts for attention to weigh
+against each other.
+
 ## Exercise
 
 For a real multi-session project you're working on with Claude, write a

@@ -84,6 +84,48 @@ Running this checklist on the first output from a new template is worth the
 minute it takes — it's much cheaper than discovering the format is subtly
 wrong after you've already fed 20 outputs into a script.
 
+## How It Actually Works
+
+Structured output formats aren't rendered by a separate formatting engine —
+they're generated token by token like everything else, which explains both
+why they usually work well and where they can subtly break.
+
+**Valid JSON, tables, and markdown all emerge from the same next-token
+process constrained by strong statistical patterns.** Training data
+contains vast amounts of well-formed JSON, markdown tables, and templated
+text, so once generation starts down one of those paths — say, an opening
+`{` — the syntactically valid continuation (a quoted key, then a colon,
+then a value) is overwhelmingly the most probable next tokens, because
+that's the pattern seen almost universally in training. This is why
+structure requests tend to be reliable: you're not fighting the model's
+tendencies, you're aligning your request with an extremely well-reinforced
+pattern.
+
+**Errors in structure usually come from local, not global, prediction
+mistakes.** Because generation is sequential and each token depends on
+what came before, a single wrong token early in a structured block (a
+missing comma, an unescaped quote inside a string) can cascade — every
+token after it is now conditioned on an already-malformed sequence, and the
+model may "recover" by producing something that looks locally plausible but
+breaks strict parsing. This is why asking for simpler, more constrained
+structures (a table over deeply nested JSON, for instance) tends to be more
+reliably parseable: fewer opportunities for one early token-level slip to
+propagate.
+
+**A fixed template acts the same way examples do in few-shot prompting
+(Module 1)** — by giving explicit token-level scaffolding to fill in rather
+than asking the model to invent structure from a verbal description, you
+reduce the space of plausible continuations to "the same shape, different
+content," which is a much narrower and more reliable generation target than
+"a well-organized response" left to the model's own judgment.
+
+**None of this is validation.** Because structured output is still
+generated probabilistically rather than produced by a strict grammar
+enforcer (unless the specific product you're using adds explicit
+constrained decoding or schema validation), a response that reads as valid
+JSON should still be parsed and checked programmatically before being fed
+downstream, not assumed correct because it looks right.
+
 ## Exercise
 
 Pick a task you do repeatedly where the output should always have the same

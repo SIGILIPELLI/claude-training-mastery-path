@@ -69,6 +69,31 @@ Add a short section (a few sentences) on how this playbook gets
 introduced to the team: who owns keeping it updated, how someone
 proposes a change, and where it lives.
 
+## How It Actually Works
+
+Building a team playbook is really an exercise in institutionalizing the
+mechanism-level lessons from every module in this level, so it's worth
+naming the thread that ties them together.
+
+**Every step you're documenting is really a decision about what context
+gets assembled, how, and who checks the result.** Inventorying current
+use (Step 1) surfaces where teammates are supplying inconsistent context
+for "the same" tasks (Module 6's core problem); shared context management
+(Step 2) fixes that by centralizing the highest-leverage tokens once;
+the privacy boundary (Step 3) governs what's allowed into that shared
+context at all, because once sent, it's processed and potentially retained
+regardless of intent (Module 7); the human-judgment checkpoints (Step 4)
+mark exactly the points where the task depends on information or
+accountability the model was never given (Module 4); and the quality bar
+(Step 6) operationalizes the fluency-versus-correctness gap (Module 9) as
+an explicit, checkable rubric rather than a vague "looks right."
+
+**A playbook is durable precisely because it doesn't depend on any one
+person recreating good context from memory each time** — it's the team-
+scale version of the repeatable process from Module 8: documented inputs,
+framing, and verification steps that produce consistent conditioning for
+the model regardless of who runs them or when.
+
 ## Deliverable
 
 A single document (1-3 pages is plenty) covering: current-use inventory,

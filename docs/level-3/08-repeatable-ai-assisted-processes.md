@@ -71,6 +71,39 @@ failure it wasn't designed for. Build a light habit of a quarterly
 glance at your most-used processes rather than waiting for a failure to
 force the update.
 
+## How It Actually Works
+
+A documented process is, mechanistically, a way of guaranteeing the same
+high-quality context gets assembled every time — which matters precisely
+because the model has no memory of "how we usually do this" to fall back
+on between separate uses.
+
+**Every run of a process is an independent context assembly with zero
+carryover from the last time you ran it.** Unless it happens within the
+same conversation, there's no learned adaptation to your specific
+recurring task sitting inside the model between sessions — each invocation
+starts from the same general-purpose trained weights, and all of the
+task-specific quality comes from what you (or your documented process)
+supply as context that run. "I know how to do this" only helps if you
+reliably reconstruct the same context every time; a documented process
+makes that reconstruction explicit and checkable instead of dependent on
+memory.
+
+**The anatomy of a documented process (inputs, prompt, verification steps)
+mirrors exactly what actually determines output quality: what's in context,
+how it's framed, and what's checked afterward.** Because that's the entire
+causal chain from "task" to "output" in the underlying mechanism, a
+process document that fully specifies those three things is, in a real
+sense, specifying everything that matters — there's no hidden fourth
+factor the process could be missing.
+
+**Maintaining a process over time matters because the model behind it can
+change.** A prompt tuned against one model version's specific tendencies
+can behave differently after a model update, since the underlying weights
+(and therefore the learned probability distribution the prompt is
+steering) are not the same — which is exactly why a documented process
+needs periodic re-validation, not a one-time setup.
+
 ## Exercise
 
 Pick one AI-assisted task you currently do ad hoc and repeat at least

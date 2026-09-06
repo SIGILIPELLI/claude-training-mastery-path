@@ -79,6 +79,34 @@ Before treating it as done, run one more check:
 - Is anything stated more confidently than the underlying evidence
   justifies?
 
+## How It Actually Works
+
+This project chains together seven modules' worth of techniques, and every
+one of them ultimately manipulates the same two things: what tokens sit in
+context at each step, and how tightly that context narrows the next-token
+distribution.
+
+**Each step in this workflow deliberately controls what's in context for
+the step after it.** Scoping the question (Step 1) sets an output contract
+that shapes everything downstream; researching sub-questions with
+structured output (Step 2) produces clean, attention-friendly artifacts
+rather than loose prose; verifying flagged claims (Step 3) is the point
+where ungrounded, training-data-derived generation gets replaced with
+something checked against real sources. By the time you reach chain-of-
+thought synthesis (Step 5), the context feeding that step is no longer your
+original vague question — it's a curated, verified set of sub-answers,
+which is exactly why the final recommendation tends to be more reliable
+than asking for one directly: you've been engineering the model's
+conditioning at every step, not just its final prompt.
+
+**The self-review pass (Step 7) is a second, differently-framed generation
+over the same material, not an independent audit.** As covered in Module 2
+of this level, "check your work" reruns the same underlying mechanism with
+different framing, which surfaces some errors by shifting the probability
+distribution toward more cautious, error-flagging language — but it's not
+a guarantee, which is why this step still benefits from your own targeted
+scrutiny (Module 6) rather than trusting the self-review verdict alone.
+
 ## Deliverable
 
 A finished research document produced through the workflow above, plus a

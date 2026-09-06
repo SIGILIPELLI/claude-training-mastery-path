@@ -85,6 +85,49 @@ delegating a task than asking a question. Practical differences:
 | A narrow, repeated task inside a product you already use | Embedded assistant |
 | Filling out a web form, comparing options across live pages | Browser-driven tool, with confirmation on submit |
 
+## How It Actually Works
+
+Different interfaces feel like different products, but mechanistically
+they're the same underlying model wired to different amounts of context
+and different tools — that's what actually explains the practical
+differences described above.
+
+**The chat interface is closest to "raw" generation over conversation
+history.** Its context window is mostly your messages and Claude's replies
+(Module 3, Level 1), plus whatever you paste in — there's no standing
+project state being tracked unless the surface explicitly supports it
+(saved custom instructions, project knowledge). Every reply is still just:
+re-read the transcript, predict the next tokens.
+
+**Claude Code and other agentic surfaces add tool-calling round-trips
+around the same core model.** Instead of generating only natural-language
+tokens, the model can generate a structured "call this tool with these
+arguments" output; the surrounding software actually executes that call
+(reading a file, running a command), and the *result* gets inserted back
+into context as new tokens before the model continues. This is a
+fundamentally different information flow than chat: the model's context
+now includes real, verified output from the outside world mid-task, not
+just its own generated text — which is a big part of why agentic coding
+tools can be more reliable on multi-step technical tasks than asking for
+the same thing in a single chat turn.
+
+**Products embedding Claude via API are shaping the context you don't
+see.** A support tool or writing app built on the API typically injects its
+own system prompt, relevant account data, or retrieved documents into
+context before your message ever reaches the model — so the same words
+typed into two different API-powered products can produce different
+results not because the model changed, but because what's silently
+sitting in context around your message did.
+
+**Computer-use and browser-driving tools extend the same tool-call loop to
+visual/interactive actions:** a screenshot or accessibility tree gets
+encoded into context as the "observation," the model generates an action
+(click, type, navigate), the environment executes it, and the resulting
+new state is fed back in — round after round. The core mechanism (predict
+next token, now including structured actions, from everything in context)
+never changes; what changes across interfaces is only what's allowed into
+that context and what the model is permitted to do about it.
+
 ## Exercise
 
 Pick one task you currently do in chat that would actually be better

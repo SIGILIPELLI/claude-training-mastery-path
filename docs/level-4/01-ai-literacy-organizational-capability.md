@@ -58,6 +58,34 @@ deciding for yourself, and you treat a good pattern you found as
 something to share rather than a personal edge to keep. This is the
 mindset the rest of Level 4 builds on.
 
+## How It Actually Works
+
+Organizational AI literacy is a people-and-process problem, but its root
+cause is mechanistic: nothing about how the underlying model works
+transfers skill between people automatically, so the gap between a
+literate individual and a literate organization has to be closed by
+deliberate structure.
+
+**The model has no persistent, shared "memory" of an organization's good
+practices between separate users' sessions.** Each conversation, with
+anyone, on any account, starts from the same general-purpose trained
+weights (Module 1, Level 1) — there is no mechanism by which one
+employee's well-honed prompting habits, verification discipline, or
+context-supplying skill gets transferred to a colleague's session just
+because they work at the same company. Whatever quality gap exists between
+a skilled user and an unskilled one is entirely a gap in what each person
+independently knows to supply as context and how they independently
+evaluate the result — which is exactly why "a few people are good at this"
+does not compound into organizational capability on its own.
+
+**This is why the maturity curve tracks externalized artifacts, not
+individual comfort.** Shared prompt libraries, documented processes
+(Module 8, Level 3), and training materials work precisely because they
+move the knowledge of what good context looks like out of individual
+memory and into something reusable — closing the gap the model itself
+cannot close, since it can't carry a skilled user's habits over to a
+different person's unrelated session.
+
 ## Exercise
 
 Place your own team or organization on the four-stage curve above, with

@@ -50,6 +50,43 @@ repeatable processes, and keep re-testing your own assumptions about
 what AI can and can't do for your specific work, rather than treating
 this course as a finished credential.
 
+## How It Actually Works
+
+The claim that "judgment, not tool usage, is the differentiator" follows
+directly from what actually varies between an AI-fluent professional and
+someone who just has access to the same tool. The model itself is
+identical for both people — same weights, same training, same
+capabilities on a given day. What differs entirely is what goes into the
+context window (how the task is framed, what constraints and examples
+are supplied, whether the prompt asks for reasoning to be shown before
+an answer) and what happens to the output afterward (whether it's
+checked against a source, revised, or shipped as-is). Since the model
+contributes the same raw capability to everyone who can access it,
+100% of the professional differentiation has to live in those two human
+contributions — which is exactly "judgment" in this module's sense, and
+exactly why it's a durable, transferable skill rather than a fact about
+which product someone happens to use.
+
+The "show the judgment, not just the output" advice has a similar root.
+An AI system generates one continuous stream of fluent text whether the
+underlying reasoning was solid or shaky — fluency is a property of how
+the text was produced, not a signal of how carefully it was checked. Two
+outputs of equal polish can differ enormously in how much they deserved
+to be trusted, and that difference is invisible from the output alone.
+Being able to explain afterward why one output was trusted and another
+heavily revised demonstrates that a real evaluation happened in between —
+it's evidence of the verification step, which is the part of the process
+an interviewer or reviewer actually cares about, precisely because it's
+the part the AI system itself cannot supply or attest to.
+
+Finally, "material goes stale faster than skills" reflects that model
+capabilities, interfaces, and specific techniques change on a vendor's
+release cycle, while the underlying discipline — frame the task
+precisely, verify systematically, know which failure modes to watch for
+before trusting fluent output — transfers across every model generation
+built on the same fundamental architecture, which is why it's the
+investment that keeps paying off after any particular course goes stale.
+
 ## Exercise
 
 Write two or three sentences you could actually say in a performance

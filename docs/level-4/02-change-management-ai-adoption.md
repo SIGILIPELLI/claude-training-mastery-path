@@ -53,6 +53,34 @@ Treating resistance as something to overcome rather than something to
 understand tends to produce the compliant-but-unconvinced outcome that
 quietly reverts once attention moves elsewhere.
 
+## How It Actually Works
+
+Change-management failures around AI adoption are human problems, but one
+of the most common ones is downstream of a real mechanistic fact worth
+naming plainly: the tool is genuinely inconsistent at the edges, and
+pretending otherwise is what erodes trust fastest.
+
+**Trust breaks when people are told the tool is more reliable than the
+mechanism actually supports.** Because output is generated from a
+probability distribution rather than computed with guaranteed correctness
+(Module 9, Level 1; Module 9, Level 3), a new user who is told "just trust
+it" and then hits a confident, fluent, wrong answer on their first real
+use doesn't just lose confidence in that one output — they generalize to
+distrusting the tool entirely, often more harshly than the tool's real,
+bounded unreliability warrants. A rollout that's honest about *where*
+generation is strong (drafting, structuring, first-pass analysis) and
+where it needs verification (specific facts, numbers, anything with real
+stakes) sets an accurate expectation that survives contact with an
+inevitable wrong answer, rather than one that collapses at the first one.
+
+**Fear of being replaced is, mechanistically, a fear about which half of
+the task the tool can actually do.** As Module 4 (Level 3) covered,
+generation cannot substitute for judgment that depends on accountability,
+values, or information the model was never given — framing adoption
+honestly around that boundary (the tool handles generation, people keep
+judgment) addresses the fear with an accurate technical claim, not just a
+reassuring one.
+
 ## Exercise
 
 Think of one AI-assisted workflow that would benefit a team you're part

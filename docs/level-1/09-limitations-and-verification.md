@@ -85,6 +85,47 @@ be trusted as a normal first draft.
 | General structure, phrasing, brainstormed ideas | Lower risk — normal first-draft trust level applies |
 | Anything going out under your name with real stakes | Full read-through and fact-check before it ships, regardless of format |
 
+## How It Actually Works
+
+Hallucination isn't a rare glitch layered on top of otherwise-correct
+processing — it's a predictable consequence of what the model is actually
+optimizing for, and understanding that shapes exactly what's worth
+verifying.
+
+**The model optimizes for plausible continuation, not for truth.** At each
+generation step, Claude produces a probability distribution over next
+tokens learned from patterns in training data, then samples from it. A
+fabricated statistic and a real one can be nearly indistinguishable in
+*form* — both are fluent, specific-sounding, grammatically confident — because
+form is what the training process most directly shaped. There is no
+separate fact-checking pass that runs before an answer is shown, unless the
+product explicitly wires in a tool (like web search or a database lookup)
+that fetches real information and feeds it back into context as evidence
+the model can then quote. Without that, "confident" and "correct" are
+simply not the same axis.
+
+**Specific, checkable details are where the mechanism is weakest.** The
+model has strong statistical pressure toward *plausible shapes* — a citation
+looks like a citation, a quote looks like a quote, a statistic looks like a
+statistic — even when the specific content is invented, because plausible
+shape is heavily reinforced by training data while any one specific fact is
+comparatively rare and easy to blend with similar-sounding alternatives.
+This is precisely why names, dates, exact numbers, and quotations deserve
+disproportionate scrutiny compared to general reasoning or structural
+advice: the failure mode concentrates exactly where the underlying
+generation mechanism has the least to constrain it.
+
+**Verification techniques work by injecting real information into
+context.** Asking Claude to cite sources, show its reasoning, or flag
+uncertainty doesn't make the underlying generation process more truthful in
+principle — but it does make errors easier for *you* to catch, because it
+produces checkable intermediate tokens. The techniques that actually reduce
+hallucination (rather than just make it easier to catch) are the ones that
+give the model real facts to condition on — supplying the source document
+yourself, or using a tool that retrieves current information — because then
+the model is generating from genuine context instead of from training-data
+statistics alone.
+
 ## Exercise
 
 Take an output from any earlier exercise in this course (or generate a new

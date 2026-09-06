@@ -81,6 +81,50 @@ rewrite from scratch.
 | ✅ Tone | Have I said what tone fits, if the task is at all sensitive or brand-relevant? |
 | ✅ Constraints | Have I flagged anything the answer must avoid or must include? |
 
+## How It Actually Works
+
+Why does adding clarity, context, and specificity actually change the
+output, rather than just making you feel better about the prompt? It comes
+down to how the model turns your prompt into a probability distribution
+over possible responses.
+
+**A vague prompt has a wide, flat distribution.** When the model predicts
+the next token, it's conditioning on everything in context. A prompt like
+"write something about our product" is consistent with an enormous number
+of very different plausible continuations — a tagline, a technical spec, a
+tweet, a paragraph of marketing copy — so the probability mass spreads thin
+across all of them, and the token-by-token choices tend to converge on
+whatever is most generically common in training data for "product
+description"-shaped text. That's the mechanistic reason vague prompts
+produce bland, average output: the model isn't being lazy, it's correctly
+representing genuine uncertainty about what you want.
+
+**Specific details act as conditioning that narrows the distribution.**
+Every concrete detail you add — audience, tone, length, format — becomes
+part of the context every subsequent token is generated in light of. "3
+sentences, small business owners, emphasizes ease of setup" rules out a
+huge swath of otherwise-plausible continuations, so what's left is a much
+narrower, more targeted distribution. This is also why *order and repetition
+within the prompt matter less than actually stating the constraint at all* —
+the mechanism reacts to presence of a token-level signal, not to how
+strongly you feel about it.
+
+**Context isn't persuasion, it's disambiguation.** Words like "delay," "the
+team," or "pricing" are highly ambiguous in isolation — the token
+embeddings for common words carry many possible meanings learned from
+training data. Supplying facts ("delayed because a third-party API changed
+rate limits") gives the attention mechanism concrete, specific tokens to
+attach the rest of the response to, instead of letting it fall back on
+whatever generic scenario is statistically most common for that phrasing.
+
+**Format instructions work by constraining the next-token choice directly.**
+Asking for a table, a numbered list, or a fixed word count changes what
+"plausible next token" means at a structural level — right after a table
+header row, a pipe character is overwhelmingly the most probable next
+token, because the model has seen that pattern countless times in training.
+You're not just requesting a preference; you're steering which tokens even
+compete for the top spot at each step.
+
 ## Exercise
 
 Take one of the three tasks you wrote down in Module 1's exercise. Write:

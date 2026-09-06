@@ -73,6 +73,42 @@ risk tolerance decision made by [name] based on [specific reason]." This
 isn't bureaucracy for its own sake — it's what lets you (or anyone else)
 reconstruct the reasoning later, and it keeps accountability clear.
 
+## How It Actually Works
+
+The generation-vs-judgment boundary isn't just a practical convenience —
+it maps onto a real gap between what the underlying mechanism can and
+cannot supply, no matter how good the prompt is.
+
+**Generation draws on patterns present in training data and whatever's in
+context — it has no access to information that exists only in your head or
+in the future.** A model producing a draft, a structured extraction, or an
+analysis is recombining and applying statistical patterns learned from
+text plus whatever you've supplied in the current context window. Values-
+based tradeoffs specific to your situation, accountability for the
+outcome, and knowledge that was never written down anywhere Claude could
+have learned it or that you didn't supply are, by construction, not
+present in that context — no amount of clever prompting manufactures
+information or authority that was never given to the model.
+
+**This is why "over-delegating" has a specific mechanistic signature: it
+means letting fluent, confident generation stand in for a decision that
+actually depended on facts or values outside context.** Because fluency and
+correctness are optimized somewhat independently (Module 9, Level 1), a
+generated recommendation can read exactly as confidently whether or not it
+accounts for the constraint that only you knew about — there's no internal
+signal distinguishing "I have everything I need to say this" from "this is
+the most plausible-sounding thing to say given what I have," which is
+precisely the gap human judgment has to fill.
+
+**The draft-then-own pattern works by using generation for what it's
+mechanistically good at (producing a well-formed starting point fast) while
+keeping the review step for what it's not good at (judging against
+context the model never had).** This isn't a compromise so much as
+matching each half of the task to the part of the system suited to it: the
+model's strength is breadth and speed of plausible generation conditioned
+on what's given; your strength is knowing what wasn't given and what it's
+actually worth.
+
 ## Exercise
 
 Think of a recent decision where you used Claude's output heavily. Using

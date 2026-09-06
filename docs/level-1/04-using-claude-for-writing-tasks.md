@@ -85,6 +85,43 @@ pattern from Module 3 applied specifically to a writing task.
 | Restructure | The new order or structure you want |
 | Summarize | Purpose of the summary, audience, format (bullets vs. prose), length |
 
+## How It Actually Works
+
+Drafting, editing, and summarizing feel like different skills to us, but
+they're the same underlying mechanism — next-token prediction — applied
+with different conditioning.
+
+**Drafting from scratch is pure generation from a prompt's conditioning.**
+When there's no existing text to work from, every token is chosen based
+only on your instructions and the model's training. This is why specificity
+matters so much more here than in editing: with nothing else to anchor to,
+the model's only signal for "what should this sound like" is what you put
+in the prompt, so an under-specified draft prompt tends to regress toward
+the statistically most common way that kind of text gets written.
+
+**Editing is generation conditioned on your original text as additional
+context.** When you paste in existing text and ask for a rewrite, that text
+sits in the context window as strong, specific conditioning — the model
+attends heavily to your actual word choices, structure, and content, so the
+output stays much closer to "your text, adjusted" than "a fresh generic
+draft." This is why editing prompts are more forgiving of vagueness than
+drafting prompts: the source text itself is already doing a lot of the
+narrowing that Module 2 described, which is also why editing prompts that
+*don't* clearly say what to change can accidentally leave the original
+mostly untouched — there's nothing pulling the distribution away from just
+reproducing what's already there.
+
+**Summarizing is a compression task under the same token-by-token process.**
+There's no separate "extract the key points" subroutine — the model
+generates a shorter continuation conditioned on the full source text (as
+much of it as fits in context), one token at a time, guided by your
+instructions about length and focus. This is why summary quality degrades
+gracefully rather than failing outright when a document is long: as long as
+the material fits in the context window, attention can still draw on all of
+it, but the more that's competing for attention, the more a summary prompt
+benefits from stating exactly what to prioritize (Module 2's specificity
+principle again).
+
 ## Exercise
 
 Take a real piece of writing you have sitting around — an email, a set of

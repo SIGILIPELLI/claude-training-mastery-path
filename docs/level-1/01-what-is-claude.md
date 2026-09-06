@@ -80,6 +80,54 @@ with, that one sentence.
 | Is this a "generate a draft" or "verify a fact" task? | Claude is much stronger at the former; treat the latter with more scrutiny (Module 9) |
 | Am I starting a new conversation? | Remember it has no memory of prior conversations unless the product you're using explicitly provides that |
 
+## How It Actually Works
+
+Under the hood, "predicting text one piece at a time" is more specific than
+it sounds, and understanding the mechanism explains most of Claude's
+strengths and blind spots at once.
+
+**Tokens, not words.** Claude doesn't read or write in whole words — it
+operates on **tokens**, chunks of text (often a few characters, sometimes a
+whole common word) produced by a fixed tokenizer. Your prompt is converted
+into a sequence of token IDs, and the model's only job, repeated many times,
+is: given the tokens so far, output a probability distribution over what
+token comes next. It samples one token from that distribution, appends it,
+and repeats — that's the "streaming" you see. This is also why Claude can
+be worse at character-level tasks like counting letters in a word: it never
+directly sees individual letters, only token chunks.
+
+**The context window is the model's entire working memory.** Every token
+you've sent — system instructions, your messages, its own prior replies in
+the conversation — gets fed back in on every single generation step, because
+the model has no memory that persists between calls on its own. It isn't
+"remembering" the conversation the way you remember a chat from yesterday;
+each response is generated from scratch by re-reading the entire visible
+transcript up to a fixed token limit. This is precisely why a fresh
+conversation starts with zero knowledge of previous ones: nothing was
+carried over, because nothing is stored outside that one context window.
+
+**Attention is what lets it use that context at all.** The mechanism that
+lets a token attend to *any* earlier token — not just the ones right before
+it — is called self-attention. For each token being generated, the model
+computes a weighted relevance score against every token already in context,
+which is how a reference on line 1 of a long prompt can still influence a
+response generated at line 500. That relevance weighting is also why
+*where* you place important instructions and *how much irrelevant material*
+surrounds them measurably affects output quality — it's not superstition,
+it's a direct consequence of attention having to spread its "budget" across
+everything in context.
+
+**Confidence is a byproduct of probability, not of truth-checking.** Because
+the model is fundamentally choosing the statistically most plausible next
+token given its training, a fluent, grammatically confident sentence and a
+factually correct one are optimized for the same thing: plausibility of
+form. There is no separate internal step that checks a claim against a
+ground-truth database before it's produced (unless the product explicitly
+adds a tool for that, like web search). This is the mechanistic reason
+behind the "confidently wrong" behavior described above — it's not a bug in
+an otherwise truth-checking process, it's the direct result of there being
+no such process by default.
+
 ## Exercise
 
 Write down three tasks from your own week — one writing task, one analysis

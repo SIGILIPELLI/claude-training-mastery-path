@@ -96,6 +96,52 @@ The techniques compound. A strong Level 2 prompt often layers all four:
 > Return your output as a table with columns: Original sentence, Rewritten
 > sentence, Reason for the change [output contract]."
 
+## How It Actually Works
+
+These four techniques look like separate tricks, but all of them work by
+manipulating the same thing: what tokens sit in context, and therefore what
+the next-token distribution looks like.
+
+**A role assignment shifts which region of the training distribution gets
+activated.** Training data contains an enormous range of registers, and
+"as a contracts lawyer" or "as a senior backend engineer" pulls the
+generation toward the vocabulary, priorities, and level of detail
+statistically associated with that framing in the text the model learned
+from — a lawyer-framed review is more likely to surface liability and
+indemnification language; an engineer-framed review is more likely to
+surface null checks and race conditions. It's not role-play in a literal
+sense — there's no persona module being loaded — it's conditioning that
+biases which patterns are most probable to continue with.
+
+**Few-shot examples work because attention can copy structure from earlier
+tokens in context.** When you show two or three input→output pairs before
+the real request, the model doesn't need to be told abstractly "match this
+format" — it can directly attend back to the example outputs and produce a
+continuation that's structurally consistent with them, because that's the
+literal most-plausible-next-tokens pattern given what's already in context.
+This is why few-shot examples are often more reliable than a verbal
+description of the format: examples are a much stronger, more specific
+conditioning signal than an abstract instruction.
+
+**Output contracts constrain the token-level choices at generation time,
+not just the "intent."** Specifying a shape before Claude writes (rather
+than asking for it after the fact) matters because it changes what the
+*first* tokens of the response look like, which then constrains everything
+generated after — once the model has started `{"field":`, continuing with
+valid JSON syntax is now the overwhelmingly plausible continuation, whereas
+asking for JSON only as an afterthought lets the response start down a
+prose path that's harder to correct mid-generation.
+
+**Separating instructions from data reduces a specific attention failure:
+data being mistaken for instructions.** Because the model attends over the
+raw token stream without an inherent structural firewall between "what you
+told it to do" and "material you handed it to work on," clearly delimiting
+data (with quotes, XML-like tags, or headers) gives the model — and the
+attention mechanism specifically — an explicit signal for where instructions
+end and content begins, which matters even more once you start pasting in
+data from other sources (Module 3 revisits this from the summarization
+side).
+
 ## Exercise
 
 Pick a recurring task you do with Claude (or would like to). Write one

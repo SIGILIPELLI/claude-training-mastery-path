@@ -71,6 +71,42 @@ dimension of comparison avoids a generic "here are some differences" answer.
 | Multiple documents | Label each clearly and state the specific comparison you want |
 | One part matters most | Point to it explicitly rather than assuming it'll stand out on its own |
 
+## How It Actually Works
+
+"Long context" isn't a separate feature bolted onto the model — it's the
+same context window from Module 1, just with more of it occupied by
+supplied material instead of conversation.
+
+**A document you paste in becomes tokens sitting in context, exactly like
+your instructions do.** There's no distinct "document memory" separate from
+the conversation — the model sees one continuous sequence of tokens, and
+the document's content is simply part of what attention can draw on when
+generating a response. This is precisely why providing the actual document
+beats describing it: your description is a lossy, second-hand summary
+competing for the same context budget as everything else, while the real
+document gives the model direct access to the original wording, numbers,
+and structure to attend to.
+
+**Attention has to spread across everything in the window, so position and
+volume both matter.** A model's ability to relate a detail near the start
+of a huge document to something near the end depends on attention
+successfully linking distant tokens — and in practice, very long inputs can
+show uneven "recall," where content in the middle of an enormous document
+gets less effective attention than content near the beginning or end. This
+is a real, mechanistic effect (not just a documentation caveat), and it's
+why asking for something specific from a long document ("what does section
+4 say about refund timelines") that narrows down what needs strong
+attention tends to be more reliable than an open-ended "summarize this" on
+a very long input.
+
+**Multiple documents at once are just more tokens in the same window,
+concatenated.** The model doesn't inherently know where one document ends
+and another begins unless you (or the interface) mark that boundary clearly
+— which is why labeling documents explicitly ("Document A: contract,
+Document B: email thread") measurably helps: it gives the attention
+mechanism a clean token-level signal for keeping the sources distinct
+instead of blending them.
+
 ## Exercise
 
 Take a real document you have on hand (an email thread, a policy doc, a set

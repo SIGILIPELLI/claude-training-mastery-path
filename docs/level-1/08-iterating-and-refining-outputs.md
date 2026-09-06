@@ -78,6 +78,39 @@ Module 10.
 | You're iterating toward an unclear target | Small steps, react to each, converge gradually |
 | Same categories of fix keep coming up | Consider whether the original prompt needs more specificity, not more revision rounds |
 
+## How It Actually Works
+
+A revision request works by re-conditioning generation on both the original
+output and your new instruction — understanding that explains why vague
+feedback backfires and specific feedback is efficient.
+
+**Claude doesn't "have" the previous draft the way you do — it re-reads it
+as text in context.** When you say "make it better," the model has no
+internal representation of "the draft" beyond the literal token sequence
+sitting in context. It regenerates a new response conditioned on that
+sequence plus your feedback, one token at a time, from scratch. There's no
+mechanism for surgically editing "just the part that's wrong" unless your
+instruction tells it exactly which part that is — which is why an
+unscoped "make it better" risks changing things you liked: the model has
+no signal telling it those parts should be held fixed, so it's free to
+regenerate them differently.
+
+**Naming what to keep is a conditioning instruction, not a suggestion.**
+"Leave the rest as is" adds explicit tokens the model attends to that push
+the probability distribution toward reproducing the untouched sections
+near-verbatim, while concentrating the actual change in the part you
+flagged. This is the same specificity mechanism from Module 2, just applied
+to a second-pass prompt instead of a first one.
+
+**Handling multiple problems at once benefits from listing them explicitly
+because attention treats each stated issue as an independent constraint to
+satisfy.** A single vague complaint ("this doesn't quite work") gives the
+model one weak, ambiguous signal to satisfy; a numbered list of specific
+issues gives it several distinct, checkable constraints, each of which
+shows up as its own conditioning signal — which is measurably easier for
+the generation process to satisfy correctly than inferring several
+unstated problems from a vague sentence.
+
 ## Exercise
 
 Take an output you generated in an earlier module's exercise (or generate a

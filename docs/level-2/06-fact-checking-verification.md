@@ -84,6 +84,50 @@ process rather than an individual's optional judgment call — e.g. a
 Module 8 in this level covers building this kind of habit into repeatable
 personas/instructions.
 
+## How It Actually Works
+
+The claim "Claude cannot verify against reality on its own" is worth
+grounding in the actual mechanism, because it explains exactly which
+verification techniques help and which only feel like they help.
+
+**Without a tool, everything the model "knows" is baked into learned
+weights, not looked up.** Training compresses patterns from a huge text
+corpus into billions of numeric parameters; at generation time, there is no
+step where the model queries a live database or the internet to confirm a
+fact — every claim is produced from those compressed statistical patterns
+alone. That's why it "has no way to check a claim against the current state
+of the world": there is no live world-state to check against unless a tool
+explicitly fetches one and inserts it into context as new tokens.
+
+**Asking Claude to flag its own uncertainty changes the *generated tokens*,
+not the underlying epistemic state.** There's no separate confidence meter
+being read out — "I'm not fully certain about this" is itself just another
+plausible continuation, produced by the same mechanism as everything else,
+conditioned on training data where hedged language tends to co-occur with
+certain topics (rare facts, dates, statistics) more than others. It's a
+genuinely useful signal in aggregate, because the model has, in effect,
+learned some statistical association between "how well-attested is this
+kind of claim in training data" and "how hedged this kind of claim usually
+gets phrased" — but it's a correlation learned from text patterns, not a
+direct readout of an internal certainty score.
+
+**This is exactly why supplying real source material changes the outcome
+qualitatively, not just quantitatively.** When Claude has your actual
+document in context, generation is conditioned on real, present tokens it
+can directly attend to and quote — a fundamentally different situation from
+generating from training-data statistics alone. This is the mechanistic
+reason "when Claude has real source material to work from" is treated as
+its own category in this module: verification against supplied text is
+close to reading comprehension (checkable, attention-grounded), while
+verification "from memory" is closer to informed guessing dressed in
+confident language.
+
+**Tool-augmented verification (search, connected databases) works by
+literally inserting retrieved text into context before the final answer is
+generated** — turning an ungrounded claim into a grounded one by giving the
+model something real to attend to and summarize, rather than something to
+invent.
+
 ## Exercise
 
 Take a piece of Claude output (yours or a sample) that includes at least
