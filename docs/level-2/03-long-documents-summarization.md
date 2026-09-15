@@ -134,6 +134,10 @@ independent of whether the content was true or false, it may simply not
 have been strongly attended to at all when the summary tokens were
 generated.
 
+## 🔀 Related lessons on other tracks
+
+- [Adobe — 08 · InDesign Styles & Long Documents](https://sigilipelli.github.io/adobe-mastery-path/level-3/08-indesign-styles-long-documents/)
+
 ## Exercise
 
 Take a document at least several pages long (a real report, a long email

@@ -84,6 +84,10 @@ mechanism works — the two categories require different amounts of
 re-checking, which is why this section itself avoids citing specific
 numbers that would be exactly this kind of perishable claim.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 09 · Staying Current in a Fast-Moving Landscape](https://sigilipelli.github.io/ai-tools-mastery-path/level-3/09-staying-current/)
+
 ## Exercise
 
 List one workflow or habit you built around a past limitation of AI

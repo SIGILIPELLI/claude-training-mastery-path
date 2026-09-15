@@ -105,6 +105,10 @@ distribution is peaked and confident (attempts agree) versus wide and
 uncertain (attempts diverge) — which is a genuine, checkable signal about
 reliability that a single output can never reveal on its own.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 09 · Evaluating AI Output Critically](https://sigilipelli.github.io/ai-tools-mastery-path/level-1/09-evaluating-ai-output-critically/)
+
 ## Exercise
 
 Take a recent piece of AI-assisted output you used without a formal

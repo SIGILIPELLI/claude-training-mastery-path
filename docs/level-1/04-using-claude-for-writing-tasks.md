@@ -126,6 +126,10 @@ it, but the more that's competing for attention, the more a summary prompt
 benefits from stating exactly what to prioritize (Module 2's specificity
 principle again).
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 04 · AI for Writing & Research Tasks](https://sigilipelli.github.io/ai-tools-mastery-path/level-1/04-ai-for-writing-research/)
+
 ## Exercise
 
 Take a real piece of writing you have sitting around — an email, a set of

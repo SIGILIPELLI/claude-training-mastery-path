@@ -121,6 +121,10 @@ ask doesn't make Claude more likely to be right in some deep sense; it
 makes the *reasoning legible enough for you to check it yourself*, which is
 where the real reliability gain comes from.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 04 · AI for Writing & Research Tasks](https://sigilipelli.github.io/ai-tools-mastery-path/level-1/04-ai-for-writing-research/)
+
 ## Exercise
 
 Pick a real decision you're weighing (work or personal — which tool to

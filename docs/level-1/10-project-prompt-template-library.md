@@ -125,6 +125,10 @@ variable at a time — if a result is off, you can trace it to what changed
 (your inputs) rather than to unpredictable variation in how you happened to
 phrase the request that day.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 10 · Project — Build a Personal AI Toolkit](https://sigilipelli.github.io/ai-tools-mastery-path/level-1/10-project-personal-ai-toolkit/)
+
 ## Exercise (the project deliverable)
 
 Produce your personal prompt template library: **5 to 10 templates**, each

@@ -128,6 +128,10 @@ Q3 target, we're now targeting Q4") gives an unambiguous, recent signal
 rather than leaving two contradictory facts for attention to weigh
 against each other.
 
+## 🔀 Related lessons on other tracks
+
+- [Project Manager — 07 · Change Management for Projects](https://sigilipelli.github.io/project-manager-mastery-path/level-2/07-change-management/)
+
 ## Exercise
 
 For a real multi-session project you're working on with Claude, write a

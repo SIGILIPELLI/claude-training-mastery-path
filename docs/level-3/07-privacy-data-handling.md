@@ -121,6 +121,12 @@ potentially logged the same way, which is why the sensitivity checklist
 needs to apply to what a connected tool *can* access, not only to what you
 manually paste.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 06 · Data Privacy & Security When Using AI Tools](https://sigilipelli.github.io/ai-tools-mastery-path/level-2/06-data-privacy-security/)
+- [ETL & Data Lake — 05 · Handling Late-Arriving & Out-of-Order Data](https://sigilipelli.github.io/etl-datalake-mastery-path/level-3/05-late-arriving-data/)
+- [Pyspark — 03 · Handling Skewed Data](https://sigilipelli.github.io/pyspark-mastery-path/level-3/03-handling-skewed-data/)
+
 ## Exercise
 
 Take a real task you'd like AI help with that involves data you were

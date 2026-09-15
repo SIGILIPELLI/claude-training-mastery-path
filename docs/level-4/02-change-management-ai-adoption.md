@@ -85,6 +85,12 @@ honestly around that boundary (the tool handles generation, people keep
 judgment) addresses the fear with an accurate technical claim, not just a
 reassuring one.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Manager — 08 · Change Management for AI Adoption](https://sigilipelli.github.io/ai-manager-mastery-path/level-2/08-change-management-ai-adoption/)
+- [Agile — 01 · Agile Transformation & Change Management](https://sigilipelli.github.io/agile-mastery-path/level-4/01-agile-transformation-change-management/)
+- [AI Tools — 06 · Change Management for AI Tool Rollouts](https://sigilipelli.github.io/ai-tools-mastery-path/level-3/06-change-management-rollouts/)
+
 ## Exercise
 
 Think of one AI-assisted workflow that would benefit a team you're part

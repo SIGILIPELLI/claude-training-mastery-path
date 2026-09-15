@@ -87,6 +87,10 @@ fluent about something they should verify, and when a task actually needed
 their own accountable decision rather than a draft — which is a
 transferable skill in a way that "here are the buttons" never is.
 
+## 🔀 Related lessons on other tracks
+
+- [AI Tools — 08 · Training Teams to Use AI Tools Effectively](https://sigilipelli.github.io/ai-tools-mastery-path/level-3/08-training-teams/)
+
 ## Exercise
 
 Plan a 30-minute training session for one real colleague on one real
