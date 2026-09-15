@@ -1,3 +1,7 @@
+---
+description: "Giving Claude Documents & Context — So far this course has focused on what you type. But much of the real value of Claude comes from giving it something…"
+---
+
 # 07 · Giving Claude Documents & Context
 
 So far this course has focused on what you type. But much of the real value

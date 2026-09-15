@@ -1,3 +1,7 @@
+---
+description: "Using Claude for Long Documents & Summarization Strategies — Long inputs — reports, transcripts, contracts, codebases — need a different approach than…"
+---
+
 # 03 · Using Claude for Long Documents & Summarization Strategies
 
 Long inputs — reports, transcripts, contracts, codebases — need a different

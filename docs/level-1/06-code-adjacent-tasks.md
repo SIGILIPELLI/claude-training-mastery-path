@@ -1,3 +1,7 @@
+---
+description: "Using Claude for Code-Adjacent Tasks — You don't need to be a programmer to get value from Claude on code-related work — explaining what a piece of code…"
+---
+
 # 06 · Using Claude for Code-Adjacent Tasks
 
 You don't need to be a programmer to get value from Claude on code-related

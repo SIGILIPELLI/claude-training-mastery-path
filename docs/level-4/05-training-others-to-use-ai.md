@@ -1,3 +1,7 @@
+---
+description: "Training Others to Use AI Assistants Effectively — Once you're AI-fluent yourself, the next capability is teaching it — and teaching this well is…"
+---
+
 # 05 · Training Others to Use AI Assistants Effectively
 
 Once you're AI-fluent yourself, the next capability is teaching it —

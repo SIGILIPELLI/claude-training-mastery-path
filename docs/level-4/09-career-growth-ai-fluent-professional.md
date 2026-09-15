@@ -1,3 +1,7 @@
+---
+description: "Career Growth: Becoming an AI-Fluent Professional — Having gone through Levels 1-4, the natural next question is what this is actually worth…"
+---
+
 # 09 · Career Growth: Becoming an AI-Fluent Professional
 
 Having gone through Levels 1-4, the natural next question is what this

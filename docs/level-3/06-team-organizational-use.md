@@ -1,3 +1,7 @@
+---
+description: "Team/Organizational Use of AI Assistants — Moving from individual use of Claude to a team using it consistently introduces problems that don't exist for a…"
+---
+
 # 06 · Team/Organizational Use of AI Assistants
 
 Moving from individual use of Claude to a team using it consistently

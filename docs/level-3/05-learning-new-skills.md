@@ -1,3 +1,7 @@
+---
+description: "Using Claude for Learning New Skills/Subjects Effectively — Claude is a strong learning aid, but the way most people use it for learning — asking it to…"
+---
+
 # 05 · Using Claude for Learning New Skills/Subjects Effectively
 
 Claude is a strong learning aid, but the way most people use it for

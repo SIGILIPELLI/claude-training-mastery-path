@@ -1,3 +1,7 @@
+---
+description: "AI Literacy as an Organizational Capability — Level 1-3 built individual skill. Level 4 shifts the unit of analysis: an organization where three people…"
+---
+
 # 01 · AI Literacy as an Organizational Capability
 
 Level 1-3 built individual skill. Level 4 shifts the unit of analysis:

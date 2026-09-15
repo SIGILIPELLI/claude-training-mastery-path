@@ -1,3 +1,7 @@
+---
+description: "Project — Build a Personal Prompt Template Library — This project pulls together everything from Level 1 into one lasting deliverable: a personal library…"
+---
+
 # 10 · Project — Build a Personal Prompt Template Library
 
 This project pulls together everything from Level 1 into one lasting

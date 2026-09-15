@@ -1,3 +1,7 @@
+---
+description: "Iterating & Refining Outputs — The single habit that separates people who get a lot of value from Claude from people who get a little is this: treat the…"
+---
+
 # 08 · Iterating & Refining Outputs
 
 The single habit that separates people who get a lot of value from Claude

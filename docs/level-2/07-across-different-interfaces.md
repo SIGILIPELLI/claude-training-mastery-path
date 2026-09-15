@@ -1,3 +1,7 @@
+---
+description: "Using Claude Across Different Interfaces — Claude shows up in several different surfaces — the web/app chat interface, Claude Code (a terminal-based…"
+---
+
 # 07 · Using Claude Across Different Interfaces
 
 Claude shows up in several different surfaces — the web/app chat

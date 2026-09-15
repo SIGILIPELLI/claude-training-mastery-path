@@ -1,3 +1,7 @@
+---
+description: "Responsible AI Use & Governance Basics — Level 3 covered personal data-handling discipline. At an organizational scale, that discipline needs to become…"
+---
+
 # 03 · Responsible AI Use & Governance Basics
 
 Level 3 covered personal data-handling discipline. At an organizational

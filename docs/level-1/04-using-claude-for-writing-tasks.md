@@ -1,3 +1,7 @@
+---
+description: "Using Claude for Writing Tasks — Writing is one of the categories Claude tends to be strongest at (Module 1) — drafting from scratch, editing existing…"
+---
+
 # 04 · Using Claude for Writing Tasks
 
 Writing is one of the categories Claude tends to be strongest at (Module 1)

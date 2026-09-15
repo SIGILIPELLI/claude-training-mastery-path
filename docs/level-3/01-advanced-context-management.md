@@ -1,3 +1,7 @@
+---
+description: "Advanced Context Management for Long Projects — Working with Claude across a long-running project — weeks of iteration, a large codebase, an evolving…"
+---
+
 # 01 · Advanced Context Management for Long Projects
 
 Working with Claude across a long-running project — weeks of iteration, a

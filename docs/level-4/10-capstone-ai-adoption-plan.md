@@ -1,3 +1,7 @@
+---
+description: "Capstone — Full Organizational AI Adoption Plan — This capstone combines every Level 4 module into one deliverable: a written plan for adopting AI…"
+---
+
 # 10 · Capstone — Full Organizational AI Adoption Plan
 
 This capstone combines every Level 4 module into one deliverable: a

@@ -1,3 +1,7 @@
+---
+description: "Staying Current as AI Capabilities Evolve — AI capabilities change faster than most software, which creates a real risk this course tries to avoid…"
+---
+
 # 06 · Staying Current as AI Capabilities Evolve
 
 AI capabilities change faster than most software, which creates a real

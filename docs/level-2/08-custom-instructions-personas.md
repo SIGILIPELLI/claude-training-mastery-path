@@ -1,3 +1,7 @@
+---
+description: "Building Custom Instructions/Personas for Recurring Tasks — If you find yourself typing the same role, tone, and format instructions at the start of every…"
+---
+
 # 08 · Building Custom Instructions/Personas for Recurring Tasks
 
 If you find yourself typing the same role, tone, and format instructions

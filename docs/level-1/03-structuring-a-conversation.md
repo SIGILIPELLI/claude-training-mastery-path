@@ -1,3 +1,7 @@
+---
+description: "Structuring a Conversation — Most real work with Claude isn't a single prompt-and-response — it's a conversation, where each message can build on, refine…"
+---
+
 # 03 · Structuring a Conversation
 
 Most real work with Claude isn't a single prompt-and-response — it's a

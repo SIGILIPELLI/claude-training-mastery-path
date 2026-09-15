@@ -1,3 +1,7 @@
+---
+description: "Writing Your First Effective Prompts — A prompt is just the instruction or question you give Claude — but the gap between a vague prompt and a clear one…"
+---
+
 # 02 · Writing Your First Effective Prompts
 
 A prompt is just the instruction or question you give Claude — but the gap

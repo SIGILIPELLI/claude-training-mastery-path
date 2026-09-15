@@ -1,3 +1,7 @@
+---
+description: "Measuring the Impact of AI-Assisted Work — 'AI is helping' is not a measurement — it's an impression, and impressions are exactly what led to the 'looks…"
+---
+
 # 04 · Measuring the Impact of AI-Assisted Work
 
 "AI is helping" is not a measurement — it's an impression, and

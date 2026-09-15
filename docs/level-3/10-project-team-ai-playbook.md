@@ -1,3 +1,7 @@
+---
+description: "Project — Design a Team AI Usage Playbook — This capstone ties together Level 3's modules into a single deliverable: a written playbook your team (real or…"
+---
+
 # 10 · Project — Design a Team AI Usage Playbook
 
 This capstone ties together Level 3's modules into a single deliverable:

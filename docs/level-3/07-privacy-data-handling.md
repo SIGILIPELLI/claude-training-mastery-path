@@ -1,3 +1,7 @@
+---
+description: "Privacy & Data Handling Considerations When Using AI Tools — Pasting information into an AI assistant is different from pasting it into a search bar or a…"
+---
+
 # 07 · Privacy & Data Handling Considerations When Using AI Tools
 
 Pasting information into an AI assistant is different from pasting it

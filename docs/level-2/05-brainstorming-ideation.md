@@ -1,3 +1,7 @@
+---
+description: "Using Claude for Brainstorming & Ideation — Claude is useful for widening the option space before you narrow it — generating more raw ideas, more angles…"
+---
+
 # 05 · Using Claude for Brainstorming & Ideation
 
 Claude is useful for widening the option space before you narrow it —

@@ -1,3 +1,7 @@
+---
+description: "Advanced Prompting Techniques — Level 1 covered clarity, context, and specificity — the foundation of any good prompt. This module covers techniques that…"
+---
+
 # 01 · Advanced Prompting Techniques
 
 Level 1 covered clarity, context, and specificity — the foundation of any

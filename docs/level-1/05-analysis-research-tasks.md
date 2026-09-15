@@ -1,3 +1,7 @@
+---
+description: "Using Claude for Analysis & Research Tasks — Beyond writing, Claude is often used to think through a problem, compare options, or make sense of…"
+---
+
 # 05 · Using Claude for Analysis & Research Tasks
 
 Beyond writing, Claude is often used to think through a problem, compare

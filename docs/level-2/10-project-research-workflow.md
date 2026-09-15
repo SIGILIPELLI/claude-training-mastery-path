@@ -1,3 +1,7 @@
+---
+description: "Project — A Multi-Step Research Workflow Using Claude — This capstone ties together every Module 1-9 technique into one repeatable research workflow: a…"
+---
+
 # 10 · Project — A Multi-Step Research Workflow Using Claude
 
 This capstone ties together every Module 1-9 technique into one repeatable

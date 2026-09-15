@@ -1,3 +1,7 @@
+---
+description: "Using AI for Complex Multi-Step Workflows — This module covers designing workflows where Claude handles several distinct stages of a real process — not…"
+---
+
 # 02 · Using AI for Complex Multi-Step Workflows
 
 This module covers designing workflows where Claude handles several

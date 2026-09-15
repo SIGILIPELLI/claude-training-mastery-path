@@ -1,3 +1,7 @@
+---
+description: "What Is Claude? — Claude is an AI assistant made by Anthropic that you talk to in natural language — you type (or speak) what you want, and it responds…"
+---
+
 # 01 · What Is Claude?
 
 Claude is an AI assistant made by Anthropic that you talk to in natural

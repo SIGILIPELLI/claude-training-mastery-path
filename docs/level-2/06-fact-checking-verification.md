@@ -1,3 +1,7 @@
+---
+description: "Fact-Checking & Source Verification Workflows — Level 1 introduced the core caution: verify anything Claude states as fact before you rely on it. This…"
+---
+
 # 06 · Fact-Checking & Source Verification Workflows
 
 Level 1 introduced the core caution: verify anything Claude states as

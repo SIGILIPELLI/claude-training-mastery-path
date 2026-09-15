@@ -1,3 +1,7 @@
+---
+description: "Structuring Outputs — Getting Claude to return output in a specific, reusable shape — a table, JSON, a fixed template — saves you the work of reformatting…"
+---
+
 # 04 · Structuring Outputs
 
 Getting Claude to return output in a specific, reusable shape — a table,

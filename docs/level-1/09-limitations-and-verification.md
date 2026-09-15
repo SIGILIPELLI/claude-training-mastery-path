@@ -1,3 +1,7 @@
+---
+description: "Understanding Limitations & Verifying Outputs — Every module so far has built toward using Claude effectively. This one is about the other half of the…"
+---
+
 # 09 · Understanding Limitations & Verifying Outputs
 
 Every module so far has built toward using Claude effectively. This one is

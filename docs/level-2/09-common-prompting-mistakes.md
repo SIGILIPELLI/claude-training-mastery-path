@@ -1,3 +1,7 @@
+---
+description: "Common Prompting Mistakes & How to Fix Them — This module is a diagnostic reference: recognizable prompting mistakes, why they produce the output they do…"
+---
+
 # 09 · Common Prompting Mistakes & How to Fix Them
 
 This module is a diagnostic reference: recognizable prompting mistakes,

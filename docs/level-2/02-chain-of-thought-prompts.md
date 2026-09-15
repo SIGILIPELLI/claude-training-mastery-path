@@ -1,3 +1,7 @@
+---
+description: "Chain-of-Thought & Step-by-Step Reasoning Prompts — Claude, like other LLMs, produces more reliable answers on multi-step problems when it reasons through…"
+---
+
 # 02 · Chain-of-Thought & Step-by-Step Reasoning Prompts
 
 Claude, like other LLMs, produces more reliable answers on multi-step

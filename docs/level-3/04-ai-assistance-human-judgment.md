@@ -1,3 +1,7 @@
+---
+description: "Combining AI Assistance with Human Judgment — Every prior module has implied a boundary between what Claude should generate and where a human needs to…"
+---
+
 # 04 · Combining AI Assistance with Human Judgment
 
 Every prior module has implied a boundary between what Claude should

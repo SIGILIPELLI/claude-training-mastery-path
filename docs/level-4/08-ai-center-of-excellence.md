@@ -1,3 +1,7 @@
+---
+description: "Building an AI Usage Center of Excellence — A center of excellence (CoE) is the structural answer to the problem raised in Module 1: individual skill…"
+---
+
 # 08 · Building an AI Usage Center of Excellence
 
 A center of excellence (CoE) is the structural answer to the problem

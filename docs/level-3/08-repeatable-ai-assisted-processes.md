@@ -1,3 +1,7 @@
+---
+description: "Building Repeatable AI-Assisted Processes — A one-off good prompt is useful once. A repeatable process — one you or your team can run the same way every…"
+---
+
 # 08 · Building Repeatable AI-Assisted Processes
 
 A one-off good prompt is useful once. A repeatable process — one you or

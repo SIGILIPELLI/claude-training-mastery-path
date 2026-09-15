@@ -1,3 +1,7 @@
+---
+description: "Evaluating AI Output Quality Systematically — 'Does this look right?' is a weak evaluation method — it catches obviously broken output but misses…"
+---
+
 # 09 · Evaluating AI Output Quality Systematically
 
 "Does this look right?" is a weak evaluation method — it catches

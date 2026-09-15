@@ -1,3 +1,7 @@
+---
+description: "Change Management for AI Adoption — Introducing AI-assisted workflows into a team is a change-management problem before it's a tooling problem: the…"
+---
+
 # 02 · Change Management for AI Adoption
 
 Introducing AI-assisted workflows into a team is a change-management

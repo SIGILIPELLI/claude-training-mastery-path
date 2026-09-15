@@ -1,3 +1,7 @@
+---
+description: "Ethical Considerations in AI-Assisted Work — Governance (Module 3) covers what an organization requires. Ethics covers what's right even where nothing…"
+---
+
 # 07 · Ethical Considerations in AI-Assisted Work
 
 Governance (Module 3) covers what an organization requires. Ethics

@@ -1,3 +1,7 @@
+---
+description: "Prompt Iteration & Systematic Testing of Prompts — For a prompt you'll reuse many times — a persona, a workflow step, a template — treating it as…"
+---
+
 # 03 · Prompt Iteration & Systematic Testing of Prompts
 
 For a prompt you'll reuse many times — a persona, a workflow step, a
