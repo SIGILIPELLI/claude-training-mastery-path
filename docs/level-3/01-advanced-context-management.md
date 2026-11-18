@@ -130,7 +130,7 @@ against each other.
 
 ## 🔀 Related lessons on other tracks
 
-- [Project Manager — 07 · Change Management for Projects](https://sigilipelli.github.io/project-manager-mastery-path/level-2/07-change-management/)
+- [Project Manager — 07 · Change Management for Projects](https://learnmasterypath.com/project-manager-mastery-path/level-2/07-change-management/)
 
 ## Exercise
 

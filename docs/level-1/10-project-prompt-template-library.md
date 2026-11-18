@@ -127,7 +127,7 @@ phrase the request that day.
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Tools — 10 · Project — Build a Personal AI Toolkit](https://sigilipelli.github.io/ai-tools-mastery-path/level-1/10-project-personal-ai-toolkit/)
+- [AI Tools — 10 · Project — Build a Personal AI Toolkit](https://learnmasterypath.com/ai-tools-mastery-path/level-1/10-project-personal-ai-toolkit/)
 
 ## Exercise (the project deliverable)
 

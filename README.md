@@ -7,7 +7,7 @@ examples and a hands-on deliverable at the end of each level.
 This is an independent educational resource, not an official Anthropic
 publication.
 
-**Live site:** https://sigilipelli.github.io/claude-training-mastery-path/
+**Live site:** https://learnmasterypath.com/claude-training-mastery-path/
 
 ## Contents
 
@@ -26,6 +26,6 @@ python3 -m venv .venv
 
 ## Related
 
-- [Product Manager Mastery Path](https://sigilipelli.github.io/product-manager-mastery-path/)
-- [AI/ML Mastery Path](https://sigilipelli.github.io/ai-ml-mastery-path/)
-- [RAG Mastery Path](https://sigilipelli.github.io/rag-mastery-path/)
+- [Product Manager Mastery Path](https://learnmasterypath.com/product-manager-mastery-path/)
+- [AI/ML Mastery Path](https://learnmasterypath.com/ai-ml-mastery-path/)
+- [RAG Mastery Path](https://learnmasterypath.com/rag-mastery-path/)

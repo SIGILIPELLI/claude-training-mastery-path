@@ -136,7 +136,7 @@ generated.
 
 ## 🔀 Related lessons on other tracks
 
-- [Adobe — 08 · InDesign Styles & Long Documents](https://sigilipelli.github.io/adobe-mastery-path/level-3/08-indesign-styles-long-documents/)
+- [Adobe — 08 · InDesign Styles & Long Documents](https://learnmasterypath.com/adobe-mastery-path/level-3/08-indesign-styles-long-documents/)
 
 ## Exercise
 

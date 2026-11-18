@@ -128,7 +128,7 @@ principle again).
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Tools — 04 · AI for Writing & Research Tasks](https://sigilipelli.github.io/ai-tools-mastery-path/level-1/04-ai-for-writing-research/)
+- [AI Tools — 04 · AI for Writing & Research Tasks](https://learnmasterypath.com/ai-tools-mastery-path/level-1/04-ai-for-writing-research/)
 
 ## Exercise
 

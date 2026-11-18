@@ -123,9 +123,9 @@ manually paste.
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Tools — 06 · Data Privacy & Security When Using AI Tools](https://sigilipelli.github.io/ai-tools-mastery-path/level-2/06-data-privacy-security/)
-- [ETL & Data Lake — 05 · Handling Late-Arriving & Out-of-Order Data](https://sigilipelli.github.io/etl-datalake-mastery-path/level-3/05-late-arriving-data/)
-- [Pyspark — 03 · Handling Skewed Data](https://sigilipelli.github.io/pyspark-mastery-path/level-3/03-handling-skewed-data/)
+- [AI Tools — 06 · Data Privacy & Security When Using AI Tools](https://learnmasterypath.com/ai-tools-mastery-path/level-2/06-data-privacy-security/)
+- [ETL & Data Lake — 05 · Handling Late-Arriving & Out-of-Order Data](https://learnmasterypath.com/etl-datalake-mastery-path/level-3/05-late-arriving-data/)
+- [Pyspark — 03 · Handling Skewed Data](https://learnmasterypath.com/pyspark-mastery-path/level-3/03-handling-skewed-data/)
 
 ## Exercise
 

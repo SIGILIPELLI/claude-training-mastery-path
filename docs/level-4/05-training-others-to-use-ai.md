@@ -89,7 +89,7 @@ transferable skill in a way that "here are the buttons" never is.
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Tools — 08 · Training Teams to Use AI Tools Effectively](https://sigilipelli.github.io/ai-tools-mastery-path/level-3/08-training-teams/)
+- [AI Tools — 08 · Training Teams to Use AI Tools Effectively](https://learnmasterypath.com/ai-tools-mastery-path/level-3/08-training-teams/)
 
 ## Exercise
 

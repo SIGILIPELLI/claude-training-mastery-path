@@ -86,7 +86,7 @@ numbers that would be exactly this kind of perishable claim.
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Tools — 09 · Staying Current in a Fast-Moving Landscape](https://sigilipelli.github.io/ai-tools-mastery-path/level-3/09-staying-current/)
+- [AI Tools — 09 · Staying Current in a Fast-Moving Landscape](https://learnmasterypath.com/ai-tools-mastery-path/level-3/09-staying-current/)
 
 ## Exercise
 

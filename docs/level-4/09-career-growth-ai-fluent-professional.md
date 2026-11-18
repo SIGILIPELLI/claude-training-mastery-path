@@ -93,9 +93,9 @@ investment that keeps paying off after any particular course goes stale.
 
 ## 🔀 Related lessons on other tracks
 
-- [English Fluency & IELTS — 09 · Career Growth: Becoming an English Fluency Coach](https://sigilipelli.github.io/english-fluency-mastery-path/level-4/09-career-growth-fluency-coach/)
-- [Agile — 09 · Career Growth: Scrum Master to Agile Coach/Director](https://sigilipelli.github.io/agile-mastery-path/level-4/09-career-growth-scrum-master-to-coach/)
-- [AI Manager — 09 · Career Growth: AI Manager to Chief AI Officer](https://sigilipelli.github.io/ai-manager-mastery-path/level-4/09-career-growth-ai-manager-to-caio/)
+- [English Fluency & IELTS — 09 · Career Growth: Becoming an English Fluency Coach](https://learnmasterypath.com/english-fluency-mastery-path/level-4/09-career-growth-fluency-coach/)
+- [Agile — 09 · Career Growth: Scrum Master to Agile Coach/Director](https://learnmasterypath.com/agile-mastery-path/level-4/09-career-growth-scrum-master-to-coach/)
+- [AI Manager — 09 · Career Growth: AI Manager to Chief AI Officer](https://learnmasterypath.com/ai-manager-mastery-path/level-4/09-career-growth-ai-manager-to-caio/)
 
 ## Exercise
 

@@ -107,7 +107,7 @@ reliability that a single output can never reveal on its own.
 
 ## 🔀 Related lessons on other tracks
 
-- [AI Tools — 09 · Evaluating AI Output Critically](https://sigilipelli.github.io/ai-tools-mastery-path/level-1/09-evaluating-ai-output-critically/)
+- [AI Tools — 09 · Evaluating AI Output Critically](https://learnmasterypath.com/ai-tools-mastery-path/level-1/09-evaluating-ai-output-critically/)
 
 ## Exercise
 
