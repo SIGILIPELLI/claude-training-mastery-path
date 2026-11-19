@@ -70,7 +70,7 @@ Claude apps, or however you already access it) — just a document editor to
 write the exercises in. Every framework in this course is presented as a
 table or template you can copy directly into your own notes.
 
-🎥 **Prefer video?** Watch the [Mastery Path video series](https://youtube.com/@sigilipelli) on YouTube — Shorts and full walkthroughs of these lessons.
+🎥 **Prefer video?** Watch the [Mastery Path video series](https://youtube.com/@learnmasterypath) on YouTube — Shorts and full walkthroughs of these lessons.
 
 ## More from the Mastery Path series
 
