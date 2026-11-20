@@ -1,3 +1,7 @@
+---
+description: "Level 2 (Intermediate) of the free Claude Training Mastery Path: Advanced Prompting Techniques, Chain-of-Thought & Step-by-Step Reasoning Prompts, Using…"
+---
+
 # Level 2 · Intermediate
 
 ## Modules

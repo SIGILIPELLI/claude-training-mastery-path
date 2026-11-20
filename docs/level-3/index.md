@@ -1,3 +1,7 @@
+---
+description: "Level 3 (Advanced) of the free Claude Training Mastery Path: Advanced Context Management for Long Projects, Using AI for Complex Multi-Step Workflows…"
+---
+
 # Level 3 · Advanced
 
 ## Modules

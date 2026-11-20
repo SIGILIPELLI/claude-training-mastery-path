@@ -1,3 +1,7 @@
+---
+description: "Level 1 (Entry) of the free Claude Training Mastery Path. Understand what Claude actually is and isn't, get comfortable writing clear and specific prompts…"
+---
+
 # Level 1 · Entry <span class="level-badge">Foundations</span>
 
 Goal: understand what Claude actually is and isn't, get comfortable writing

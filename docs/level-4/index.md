@@ -1,3 +1,7 @@
+---
+description: "Level 4 (Master) of the free Claude Training Mastery Path: AI Literacy as an Organizational Capability, Change Management for AI Adoption, Responsible AI…"
+---
+
 # Level 4 · Master
 
 ## Modules
