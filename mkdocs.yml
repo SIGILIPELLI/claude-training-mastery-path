@@ -53,9 +53,11 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/progress-tracker.css
+  - stylesheets/final-quiz.css
 
 extra_javascript:
   - javascripts/progress-tracker.js
+  - javascripts/final-quiz.js
 
 
 
@@ -127,3 +129,5 @@ nav:
       - "08 · Building an AI Usage Center of Excellence": level-4/08-ai-center-of-excellence.md
       - "09 · Career Growth: Becoming an AI-Fluent Professional": level-4/09-career-growth-ai-fluent-professional.md
       - "10 · Capstone — Full Organizational AI Adoption Plan": level-4/10-capstone-ai-adoption-plan.md
+  - "🎯 Final Quiz": quiz.md
+
