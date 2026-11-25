@@ -36,8 +36,7 @@ always check the current [Claude documentation](https://docs.claude.com/).
   scenario, and a cheat-sheet table you can reuse directly.
 - Each topic ends with a practical **Exercise** — a deliverable you actually
   write, not a quiz.
-- Each level ends with a project that combines everything learned in that
-  level into a single real artifact.
+- Levels 1–3 each end with a project that combines everything learned in that level into a single real artifact.
 - Use the search bar (top of the page) to jump straight to a topic.
 
 Start here → [Level 1 · Entry](level-1/index.md)
